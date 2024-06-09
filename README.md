@@ -17,7 +17,7 @@
   <img align="left" title="Informatica" alt="Informatica" width="60px" src="./asset/informatica_svg.svg" style="max-width: 100%;">
 </a>
 <a href="https://www.w3schools.com/sql/" target="_blank">
-  <img align="left" title="SQL" alt="SQL" width="60px" src="./asset/sql.jpeg" style="max-width: 100%;">
+  <img align="left" title="SQL" alt="SQL" width="50px" src="./asset/sql.jpeg" style="max-width: 100%;">
 </a>
 <a href="https://www.javatpoint.com/linux-tutorial" target="_blank">
   <img align="left" title="Linux" alt="Linux" width="60px" src="./asset/linux_svg.svg" style="max-width: 100%;">
@@ -33,8 +33,8 @@
 
 
 
-
 <br></br>
+-
 
 
 <h2 align="left">Connect with me:</h2>
