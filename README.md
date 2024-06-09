@@ -46,3 +46,12 @@
 
 <h2 align="left">Support</h2>
 <p><a href="https://www.buymeacoffee.com/thenaman"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="thenaman" /></a></p>
+
+<br></br>
+
+<h2 align="left">Stats</h2>
+
+<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&locale=en" alt="the-naman" /></p>
+
+
