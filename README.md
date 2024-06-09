@@ -55,8 +55,6 @@
 
 
 
-<!--This below line show the total count of profile visitors-->
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
 
 
 <!--Code for Quotes-->
@@ -68,4 +66,7 @@
     </a>
 </details>
 
+
+<!--This below line show the total count of profile visitors-->
+<p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
 
