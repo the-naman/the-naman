@@ -23,40 +23,10 @@
 <!--These below lines show the tools and technology on which I worked-->
 <h2 align="left">I worked on</h2>
 
-<!--INFORMATICA-->
-<a href="https://www.informatica.com/in/" target="_blank">
-  <img align="left" title="Informatica" alt="Informatica" width="60px" src="./asset/informatica_svg.svg" style="max-width: 100%;">
-</a>
+<!--|INFORMATICA|SQL|LINUX|POWER BI|PYTHON|HTML5|CSS3|-->
+| <a href="https://www.informatica.com/in/" target="_blank"> <img align="left" title="Informatica" alt="Informatica" width="60px" src="./asset/informatica_svg.svg" style="max-width: 100%;"> </a> | <a href="https://www.w3schools.com/sql/" target="_blank"> <img align="left" title="SQL" alt="SQL" width="50px" src="./asset/sql.jpeg" style="max-width: 100%;"> </a> | <a href="https://www.javatpoint.com/linux-tutorial" target="_blank"> <img align="left" title="Linux" alt="Linux" width="60px" src="./asset/linux_svg.svg" style="max-width: 100%;"> </a> | <a href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi" target="_blank"> <img align="left" title="Power BI" alt="Power BI" width="60px" src="./asset/powerbi_svg.svg" style="max-width: 100%;"> </a> | <a href="https://www.python.org/" target="_blank"> <img align="left" title="Python" alt="Python" width="70px" src="./asset/python_svg.svg" style="max-width: 100%;"> </a> | <a href="https://www.w3schools.com/html/" target="_blank"> <img align="left" title="HTML5" alt="HTML5" width="70px" src="./asset/html5_svg.svg" style="max-width: 100%;"> </a> | <a href="https://www.w3schools.com/css/" target="_blank"> <img align="left" title="CSS3" alt="CSS3" width="65px" src="./asset/css3_svg.svg" style="max-width: 100%;"> </a> |
 
-<!--SQL-->
-<a href="https://www.w3schools.com/sql/" target="_blank">
-  <img align="left" title="SQL" alt="SQL" width="50px" src="./asset/sql.jpeg" style="max-width: 100%;">
-</a>
-
-<!--LINUX-->
-<a href="https://www.javatpoint.com/linux-tutorial" target="_blank">
-  <img align="left" title="Linux" alt="Linux" width="60px" src="./asset/linux_svg.svg" style="max-width: 100%;">
-</a>
-
-<!--POWER BI-->
-<a href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi" target="_blank">
-  <img align="left" title="Power BI" alt="Power BI" width="60px" src="./asset/powerbi_svg.svg" style="max-width: 100%;">
-</a>
-
-<!--PYTHON-->
-<a href="https://www.python.org/" target="_blank">
-  <img align="left" title="Python" alt="Python" width="70px" src="./asset/python_svg.svg" style="max-width: 100%;">
-</a>
-
-<!--HTML5-->
-<a href="https://www.w3schools.com/html/" target="_blank">
-  <img align="left" title="HTML5" alt="HTML5" width="70px" src="./asset/html5_svg.svg" style="max-width: 100%;">
-</a>
-
-<!--CSS3-->
-<a href="https://www.w3schools.com/css/" target="_blank">
-  <img align="left" title="CSS3" alt="CSS3" width="65px" src="./asset/css3_svg.svg" style="max-width: 100%;">
-</a>
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 
 <br></br>
 
