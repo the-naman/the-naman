@@ -84,7 +84,7 @@
 | <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Naman's github stats" /></a> | <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> |
 | ------------- | ------------- |
 
-|[![Naman's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=The-naman&theme=dracula)](https://github.com/The-naman/github-readme-activity-graph) |
+|[![Naman's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=The-naman&theme=github-dark)](https://github.com/The-naman/github-readme-activity-graph) |
 | ------------- |
 
 <br></br>
