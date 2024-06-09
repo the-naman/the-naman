@@ -17,7 +17,7 @@
 - 📚 I'm currently learning Power BI and Data Statistics
 - 🪪 I'm a Cyber Security graduate.
 - 🎲 And ... I play ♟ chess.
-- 📫 Feel free to connect @ **messagetonaman@gmail.com**
+- 📫 Ask me anything [HERE](mailto:messagetonaman@gmail.com)
 
 
 <!--These below lines show the tools and technology on which I worked-->
@@ -77,9 +77,10 @@
 
 <!--These below lines add the statitics view on page-->
 <h2 align="left">Stats</h2>
-<!-- <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=the-naman&show_icons=true&locale=en&layout=compact" alt="the-naman" /></p> -->
-<!-- <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p>  -->
+
+<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&locale=en" alt="the-naman" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=the-naman&show_icons=true&locale=en&layout=compact" alt="the-naman" /></p>
 
 <br></br>
 
