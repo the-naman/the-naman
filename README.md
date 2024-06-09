@@ -78,13 +78,14 @@
 <!--These below lines add the statitics view on page-->
 <h2 align="left">Stats</h2>
 
-<!--<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> -->
-<!-- <p><img align="left" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&locale=en" alt="the-naman" /></p> -->
-<!-- <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=the-naman&show_icons=true&locale=en&layout=compact" alt="the-naman" /></p> -->
+| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&layout=compact&theme=buefy&hide_border=true" /></a> |
+| ------------- |
 
-| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Naman's github stats" /></a> | <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&layout=compact&theme=buefy&hide_border=true" /></a> |
+| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Naman's github stats" /></a> | <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> |
 | ------------- | ------------- |
 
+|[![Naman's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=The-naman&theme=dracula)](https://github.com/The-naman/github-readme-activity-graph) |
+| ------------- |
 
 <br></br>
 
