@@ -34,13 +34,6 @@
 
 <br></br>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=the-naman&show_icons=true&locale=en&layout=compact" alt="the-naman" /></p>
-
-<p>&nbsp;<img align="left" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&locale=en" alt="the-naman" /></p>
-
-<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p><br></br>
-
-
 -
 
 <h2 align="left">Connect with Me</h2>
