@@ -58,13 +58,13 @@
 
 
 <!--Code for Quotes-->
-<h2>:thought_balloon: Quote of the day</h2>
+<!--<h2>:thought_balloon: Quote of the day</h2>
 <details open>
     <summary>See quote</summary>
     <a href="https://github.com/piyushsuthar/github-readme-quotes">
         <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="quotes card">
     </a>
-</details>
+</details>-->
 
 
 <!--This below line show the total count of profile visitors-->
