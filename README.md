@@ -2,7 +2,7 @@
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
 
 <!--This below line Heading-->
-<h1 align="center">Hi <img src="./asset/Hello.gif">, What's up</h1>
+<h1 align="center">Hi👋, What's up</h1>
 <h3 align="center">My Name is Naman, and I'm a Data Engineer from India.</h3>
 
 <!--This below line About me Heading-->
