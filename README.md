@@ -1,11 +1,14 @@
-<h1 align="center">Hi 👋, I'm KUMAR NAMAN</h1>
-<h3 align="center">A passionate Data Engineer from India</h3>
+<h1 align="center">Hi 👋, What's up</h1>
+<h3 align="center">My Name is Naman, and I'm a Data Engineer from India.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
 
-- 🌱 I’m currently learning **Power BI**
+<h2 align="left">About Me</h2>
 
-- 📫 How to reach me **user@example.com**
+- ✨ Creating bugs since 2022
+- 📚 I'm currently learning Power BI and Data Statistics
+- 🎲 And ... i play ♟ chess.
+- 📫 Feel free to connect @ **user@example.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
