@@ -1,5 +1,12 @@
+<!--Code for heading banner-->
+![logo](https://github.com/the-naman/the-naman/blob/main/asset/Banner1.png)
 
-<a href="https://git.io/typing-svg"><img align="" src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=Welcome+to+my+Profile%F0%9F%98%8A;Data+is+new+Fuel%F0%9F%92%B0%F0%9F%92%B2;The+end+is+the+New+Beginning%F0%9F%98%8D;Make+the+better+world!+together;Radhe+Radhe%F0%9F%99%8F%F0%9F%99%8F" alt="Typing SVG" /></a>
+<!--This is typing svg.-->
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=Welcome+to+my+Profile%F0%9F%98%8A;Data+is+new+Fuel%F0%9F%92%B0%F0%9F%92%B2;The+end+is+the+New+Beginning%F0%9F%98%8D;Make+the+better+world!+together;Radhe+Radhe%F0%9F%99%8F%F0%9F%99%8F" alt="Typing SVG" /></a>
+
+![logo](https://github.com/the-naman/the-naman/blob/main/asset/Banner2.png)
+
+
 
 <!--This below line show the total count of profile visitors-->
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
