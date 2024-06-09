@@ -44,8 +44,8 @@
 <!--These below lines add the statitics view on page-->
 <h2 align="left">Stats</h2>
 
-| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&layout=compact&theme=buefy&hide_border=true" /></a> |
-| ------------- |
+| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&layout=compact&theme=buefy&hide_border=true" /></a> | ![trophy](https://github-profile-trophy.vercel.app/?username=The-naman&theme=onedark&title=Commits&title=Repositories&title=Experience) |
+| ------------- | ------------- |
 
 | <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Naman's github stats" /></a> | <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> |
 | ------------- | ------------- |
@@ -53,7 +53,19 @@
 |[![Naman's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=The-naman&theme=github-dark)](https://github.com/The-naman/github-readme-activity-graph) |
 | ------------- |
 
-<br></br>
+
 
 <!--This below line show the total count of profile visitors-->
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
+
+
+<!--Code for Quotes-->
+<h2>:thought_balloon: Quote of the day</h2>
+<details open>
+    <summary>See quote</summary>
+    <a href="https://github.com/piyushsuthar/github-readme-quotes">
+        <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="quotes card">
+    </a>
+</details>
+
+
