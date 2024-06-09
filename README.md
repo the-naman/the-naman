@@ -3,12 +3,12 @@
 
 
 <!--This is typing svg.-->
-<p align="center" <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&random=true&width=435&lines=++++++++++++Welcome+to+my+Profile%F0%9F%98%8A;Data+is+new+Fuel%F0%9F%92%B0%F0%9F%92%B2;+The+end+is+the+New+Beginning%F0%9F%98%8D;Make+the+better+world!;Radhe+Radhe%F0%9F%99%8F%F0%9F%99%8F" alt="Typing SVG" /></a>
+<p align="center" <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FFFF00&center=true&random=true&width=435&lines=++++++++++++Welcome+to+my+Profile%F0%9F%98%8A;Data+is+new+Fuel%F0%9F%92%B0%F0%9F%92%B2;+The+end+is+the+New+Beginning%F0%9F%98%8D;Make+the+better+world!;Radhe+Radhe%F0%9F%99%8F%F0%9F%99%8F" alt="Typing SVG" /></a>
 
 
 <!--This below line Heading-->
 <h1 align="center">Hi👋, What's up</h1>
-<h3 align="center">My Name is Naman, and I'm a Data Engineer from India.</h3>
+<h4 align="center">My name is NAMAN, and I'm a DATA ENGINEER from INDIA</h4>
 
 <!--This below line About me Heading-->
 <h2 align="left">About Me</h2>
@@ -60,7 +60,6 @@
 
 <br></br>
 
-
 -
 
 <!--This below line show social profiles-->
@@ -81,7 +80,6 @@
 <!-- <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=the-naman&show_icons=true&locale=en&layout=compact" alt="the-naman" /></p> -->
 <!-- <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p>  -->
 <p><img align="left" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&locale=en" alt="the-naman" /></p>
-
 
 <br></br>
 
