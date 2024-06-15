@@ -8,7 +8,7 @@
 
 <!--This below line Heading-->
 <h1 align="center">Hi👋, What's up</h1>
-<h4 align="center">My name is NAMAN, and I'm a DATA ENGINEER from INDIA</h4>
+<h3 align="center">My name is NAMAN, and I'm a DATA ENGINEER from INDIA</h3>
 
 <!--This below line About me Heading-->
 <h2 align="left">About Me</h2>
