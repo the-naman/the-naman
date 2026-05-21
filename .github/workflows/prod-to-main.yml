@@ -2,7 +2,7 @@ name: PROD to main merge (after TEST to PROD)
 
 on:
   workflow_run:
-    workflows: ["Daily TEST to PROD merge (12:00 IST)"]
+    workflows: ["Daily TEST → PROD merge (12:00 IST)"]
     types:
       - completed
   workflow_dispatch:
