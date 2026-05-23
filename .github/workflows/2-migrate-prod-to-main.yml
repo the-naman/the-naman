@@ -1,0 +1,150 @@
+# ============================================================
+# WORKFLOW 2: PROD → main Migration
+# Triggers ONLY after "1. Migrate TEST → PROD" completes
+# successfully. On conflict: holds and sends email.
+# On success: sends a combined summary email for both migrations.
+# ============================================================
+
+name: "2. Migrate PROD → main"
+
+on:
+  workflow_run:
+    workflows: ["1. Migrate TEST → PROD"]   # Must match name: field exactly
+    types:
+      - completed
+  workflow_dispatch:   # Allow manual trigger for testing
+
+jobs:
+  migrate-prod-to-main:
+    name: Merge PROD into main
+    runs-on: ubuntu-latest
+
+    # Only run if the upstream workflow SUCCEEDED
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      # ── 1. Load central config ──────────────────────────────
+      - name: Load config
+        run: |
+          echo "NOTIFY_EMAIL=canvatemp71@gmail.com"     >> $GITHUB_ENV
+          echo "BRANCH_SOURCE=PROD"                      >> $GITHUB_ENV
+          echo "BRANCH_TARGET=main"                      >> $GITHUB_ENV
+
+      # ── 2. Checkout full history ────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
+
+      # ── 3. Configure Git identity ───────────────────────────
+      - name: Configure Git
+        run: |
+          git config user.name  "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      # ── 4. Attempt merge PROD → main ────────────────────────
+      - name: Attempt PROD → main merge
+        id: merge
+        run: |
+          git fetch origin
+          git checkout main
+          git pull origin main
+
+          if git merge origin/PROD --no-edit; then
+            echo "MERGE_RESULT=success" >> $GITHUB_ENV
+          else
+            echo "MERGE_RESULT=conflict" >> $GITHUB_ENV
+            git merge --abort
+          fi
+
+      # ── 5. Push if merge succeeded ──────────────────────────
+      - name: Push merged main branch
+        if: env.MERGE_RESULT == 'success'
+        run: |
+          git push origin main
+
+      # ── 6a. Send CONFLICT email ─────────────────────────────
+      - name: Send conflict notification email
+        if: env.MERGE_RESULT == 'conflict'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ env.NOTIFY_EMAIL }}
+          from: "GitHub Actions <${{ secrets.MAIL_USERNAME }}>"
+          subject: "⚠️ [CONFLICT] PROD → main Migration Failed — ${{ github.repository }}"
+          html_body: |
+            <h2>⚠️ Migration Conflict Detected</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+              <tr><td><b>Repository</b></td><td>${{ github.repository }}</td></tr>
+              <tr><td><b>Migration</b></td><td>PROD → main</td></tr>
+              <tr><td><b>Date/Time (UTC)</b></td><td>${{ github.event.created_at }}</td></tr>
+              <tr><td><b>Run ID</b></td><td><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">${{ github.run_id }}</a></td></tr>
+              <tr><td><b>Action Taken</b></td><td>Migration aborted. Will retry on next scheduled run (after TEST→PROD succeeds tomorrow).</td></tr>
+            </table>
+            <p>Note: TEST → PROD migration completed successfully. Only the PROD → main step has a conflict.</p>
+            <p><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">View full run logs →</a></p>
+
+      # ── 6b. Fail if conflict ─────────────────────────────────
+      - name: Fail on conflict
+        if: env.MERGE_RESULT == 'conflict'
+        run: |
+          echo "::error::Merge conflict detected between PROD and main. Migration held for today."
+          exit 1
+
+      # ── 7. Send COMBINED SUCCESS email ──────────────────────
+      # This runs only when both migrations completed without issues
+      - name: Send combined success email
+        if: env.MERGE_RESULT == 'success'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ env.NOTIFY_EMAIL }}
+          from: "GitHub Actions <${{ secrets.MAIL_USERNAME }}>"
+          subject: "✅ [SUCCESS] Daily Migration Complete — ${{ github.repository }}"
+          html_body: |
+            <h2>✅ Daily Migration Completed Successfully</h2>
+            <p>Both migration steps have completed without any conflicts.</p>
+
+            <h3>Summary</h3>
+            <table border="1" cellpadding="6" cellspacing="0">
+              <tr bgcolor="#f0f0f0">
+                <th>Step</th><th>Migration</th><th>Status</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>TEST → PROD</td>
+                <td>✅ Success</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>PROD → main</td>
+                <td>✅ Success</td>
+              </tr>
+            </table>
+
+            <h3>Details</h3>
+            <table border="1" cellpadding="6" cellspacing="0">
+              <tr><td><b>Repository</b></td><td>${{ github.repository }}</td></tr>
+              <tr><td><b>Date (UTC)</b></td><td>${{ github.event.created_at }}</td></tr>
+              <tr>
+                <td><b>Workflow Run (PROD→main)</b></td>
+                <td><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">${{ github.run_id }}</a></td>
+              </tr>
+              <tr>
+                <td><b>Triggered by (TEST→PROD Run)</b></td>
+                <td><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}">${{ github.event.workflow_run.id }}</a></td>
+              </tr>
+            </table>
+
+            <p>All environments are up to date. No action required.</p>
