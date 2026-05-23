@@ -1,0 +1,104 @@
+# ============================================================
+# WORKFLOW 1: TEST → PROD Migration
+# Runs daily at 12:00 PM IST (06:30 UTC)
+# On conflict: holds and sends email. On success: sends combined
+# success email after PROD → main also completes.
+# ============================================================
+
+name: "1. Migrate TEST → PROD"
+
+on:
+  schedule:
+    - cron: "30 6 * * *"   # 12:00 PM IST daily (IST = UTC+5:30)
+  workflow_dispatch:        # Allow manual trigger for testing
+
+jobs:
+  migrate-test-to-prod:
+    name: Merge TEST into PROD
+    runs-on: ubuntu-latest
+
+    outputs:
+      migration_status: ${{ steps.set-status.outputs.status }}
+
+    steps:
+      # ── 1. Load central config ──────────────────────────────
+      - name: Load config
+        id: config
+        run: |
+          # Source config values (inline for GitHub Actions compatibility)
+          echo "NOTIFY_EMAIL=canvatemp71@gmail.com"     >> $GITHUB_ENV
+          echo "BRANCH_SOURCE=TEST"                      >> $GITHUB_ENV
+          echo "BRANCH_TARGET=PROD"                      >> $GITHUB_ENV
+
+      # ── 2. Checkout full history ────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # Full history needed for merge
+          token: ${{ secrets.GH_PAT }}   # PAT with repo write access
+
+      # ── 3. Configure Git identity ───────────────────────────
+      - name: Configure Git
+        run: |
+          git config user.name  "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      # ── 4. Attempt merge TEST → PROD ────────────────────────
+      - name: Attempt TEST → PROD merge
+        id: merge
+        run: |
+          git fetch origin
+          git checkout PROD
+          git pull origin PROD
+
+          # Try merge — abort on conflict
+          if git merge origin/TEST --no-edit; then
+            echo "MERGE_RESULT=success" >> $GITHUB_ENV
+          else
+            echo "MERGE_RESULT=conflict" >> $GITHUB_ENV
+            git merge --abort
+          fi
+
+      # ── 5. Push if merge succeeded ──────────────────────────
+      - name: Push merged PROD branch
+        if: env.MERGE_RESULT == 'success'
+        run: |
+          git push origin PROD
+
+      # ── 6. Set job output status ────────────────────────────
+      - name: Set output status
+        id: set-status
+        run: |
+          echo "status=${{ env.MERGE_RESULT }}" >> $GITHUB_OUTPUT
+
+      # ── 7a. Send CONFLICT email ─────────────────────────────
+      - name: Send conflict notification email
+        if: env.MERGE_RESULT == 'conflict'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: false
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ env.NOTIFY_EMAIL }}
+          from: "GitHub Actions <${{ secrets.MAIL_USERNAME }}>"
+          subject: "⚠️ [CONFLICT] TEST → PROD Migration Failed — ${{ github.repository }}"
+          html_body: |
+            <h2>⚠️ Migration Conflict Detected</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+              <tr><td><b>Repository</b></td><td>${{ github.repository }}</td></tr>
+              <tr><td><b>Migration</b></td><td>TEST → PROD</td></tr>
+              <tr><td><b>Date/Time (UTC)</b></td><td>${{ github.event.created_at }}</td></tr>
+              <tr><td><b>Run ID</b></td><td><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">${{ github.run_id }}</a></td></tr>
+              <tr><td><b>Action Taken</b></td><td>Migration aborted. Will retry on next scheduled run.</td></tr>
+            </table>
+            <p>Please resolve the merge conflicts in the <b>TEST</b> branch before the next scheduled run.</p>
+            <p><a href="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}">View full run logs →</a></p>
+
+      # ── 7b. Fail the job if conflict occurred ───────────────
+      - name: Fail on conflict (blocks PROD→main chain)
+        if: env.MERGE_RESULT == 'conflict'
+        run: |
+          echo "::error::Merge conflict detected between TEST and PROD. Migration held for today."
+          exit 1
