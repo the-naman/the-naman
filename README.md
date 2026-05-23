@@ -1,3 +1,3 @@
 # profile
 
-Auto-created repository.
+Auto-created repository..
