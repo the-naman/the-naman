@@ -1,72 +1,31 @@
-<!--Code for heading banner-->
-![logo](https://github.com/the-naman/the-naman/blob/main/asset/Banner1.png)
+# 💫 About Me:
+Hi👋, What's up<br>My name is NAMAN, and I'm a DATA ENGINEER from INDIA<br>- ✨ Creating and solving bugs since 2022<br>- 📚 I'm currently learning SQL, Python, Pyspark, DataBricks, Power BI<br>- 🪪 I'm a Cyber Security graduate.<br>- 🎲 And ... I play ♟ chess.<br>Ask me about @ my email<br>Func Fact : I am currently debugging my sleep schedule
 
 
-<!--This is typing svg.-->
-<p align="center" <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=FFFF00&center=true&random=true&width=435&lines=++++++++++++Welcome+to+my+Profile%F0%9F%98%8A;Data+is+new+Fuel%F0%9F%92%B0%F0%9F%92%B2;+The+end+is+the+New+Beginning%F0%9F%98%8D;Make+the+better+world!;Radhe+Radhe%F0%9F%99%8F%F0%9F%99%8F" alt="Typing SVG" /></a>
+## 🌐 Socials:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/thenaman) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:google@gmail.com) 
 
+# 💻 Tech Stack:
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.shion.dev/api?username=the-naman&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://streak-stats.demolab.com/?user=the-naman&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=the-naman&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-<!--This below line Heading-->
-<h1 align="center">Hi👋, What's up</h1>
-<h3 align="center">My name is NAMAN, and I'm a DATA ENGINEER from INDIA</h3>
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=the-naman&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-<!--This below line About me Heading-->
-<h2 align="left">About Me</h2>
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-- ✨ Creating and solving bugs since 2022
-- 📚 I'm currently learning Power BI and Data Statistics
-- 🪪 I'm a Cyber Security graduate.
-- 🎲 And ... I play ♟ chess.
-- 📫 Ask me anything [HERE](mailto:messagetonaman@gmail.com)
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=the-naman&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
+---
+[![](https://komarev.com/ghpvc/?username=the-naman&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!--These below lines show the tools and technology on which I worked-->
-<h2 align="left">I worked on</h2>
+  ## 💰 You can help me by Donating
+  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/thenaman) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/thenaman) 
 
-<!--|INFORMATICA|SQL|LINUX|POWER BI|PYTHON|HTML5|CSS3|-->
-| <a href="https://www.informatica.com/in/" target="_blank"><img align="left" title="Informatica" alt="Informatica" width="60px" src="./asset/informatica_svg.svg" style="max-width: 100%;"></a> | <a href="https://www.w3schools.com/sql/" target="_blank"><img align="left" title="SQL" alt="SQL" width="50px" src="./asset/sql.jpeg" style="max-width: 100%;"></a> | <a href="https://www.javatpoint.com/linux-tutorial" target="_blank"><img align="left" title="Linux" alt="Linux" width="60px" src="./asset/linux_svg.svg" style="max-width: 100%;"></a> | <a href="https://learn.microsoft.com/en-us/training/powerplatform/power-bi" target="_blank"><img align="left" title="Power BI" alt="Power BI" width="60px" src="./asset/powerbi_svg.svg" style="max-width: 100%;"></a> | <a href="https://www.python.org/" target="_blank"><img align="left" title="Python" alt="Python" width="70px" src="./asset/python_svg.svg" style="max-width: 100%;"></a> | <a href="https://www.w3schools.com/html/" target="_blank"><img align="left" title="HTML5" alt="HTML5" width="70px" src="./asset/html5_svg.svg" style="max-width: 100%;"></a> | <a href="https://www.w3schools.com/css/" target="_blank"><img align="left" title="CSS3" alt="CSS3" width="65px" src="./asset/css3_svg.svg" style="max-width: 100%;"></a> |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-
-
-<!--This below line show social profiles-->
-<h2 align="left">Connect with Me</h2>
-<p align="left">
-<a href="https://linkedin.com/in/thenaman" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="thenaman" height="30" width="40" /></a>
-</p>
-
-
-<!--This below line add the support feature.-->
-<h2 align="left">Support</h2>
-<p><a href="https://www.buymeacoffee.com/thenaman"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="thenaman" /></a></p>
-
-<br></br>
-
-<!--These below lines add the statitics view on page-->
-<h2 align="left">Stats</h2>
-
-| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&layout=compact&theme=buefy&hide_border=true" /></a> | ![trophy](https://github-profile-trophy.vercel.app/?username=The-naman&theme=onedark&title=Commits&title=Repositories&title=Experience) |
-| ------------- | ------------- |
-
-| <a href="https://github.com/the-naman/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=the-naman&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Naman's github stats" /></a> | <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=the-naman&" alt="the-naman" /></p> |
-| ------------- | ------------- |
-
-|[![Naman's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=The-naman&theme=github-dark)](https://github.com/The-naman/github-readme-activity-graph) |
-| ------------- |
-
-
-
-
-
-<!--Code for Quotes-->
-<!--<h2>:thought_balloon: Quote of the day</h2>
-<details open>
-    <summary>See quote</summary>
-    <a href="https://github.com/piyushsuthar/github-readme-quotes">
-        <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="quotes card">
-    </a>
-</details>-->
-
-
-<!--This below line show the total count of profile visitors-->
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=the-naman&label=Profile%20views&color=0e75b6&style=flat" alt="the-naman" /> </p>
-
+  
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
