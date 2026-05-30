@@ -99,8 +99,16 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.shion.dev/api?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" alt="github stats" />
-  <img height="180em" src="https://github-readme-stats.shion.dev/api/top-langs/?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&langs_count=8" alt="top languages" />
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <img src="https://github-readme-stats.shion.dev/api?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&card_width=420" alt="github stats" />
+      </td>
+      <td valign="top">
+        <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&langs_count=8&card_width=420" alt="top languages" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
@@ -120,19 +128,7 @@
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=the-naman&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7" alt="trophies" />
-</div>
-
-<br>
-
-<!-- ════════════════════════════════════════════════════════════ -->
-<!--                       TOP CONTRIBUTED                         -->
-<!-- ════════════════════════════════════════════════════════════ -->
-
-## 🔝 Top Contributed Repos
-
-<div align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=the-naman&limit=5&theme=tokyonight&combine_all_yearly_contributions=true" alt="top contributed repos" />
+  <img src="https://trophy.benkou.dev/?username=the-naman&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7" alt="trophies" />
 </div>
 
 <br>
