@@ -99,8 +99,8 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" alt="github stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&langs_count=8" alt="top languages" />
+  <img height="180em" src="https://github-readme-stats.shion.dev/api?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" alt="github stats" />
+  <img height="180em" src="https://github-readme-stats.shion.dev/api/top-langs/?username=the-naman&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact&langs_count=8" alt="top languages" />
 </div>
 
 <div align="center">
