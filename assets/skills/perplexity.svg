@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="36" viewBox="0 0 123 36" role="img">
+<title>Perplexity</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient>
+<linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="123" height="36" rx="18"/></clipPath></defs>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.628;1" dur="1.21s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0" keyTimes="0;0.628;1" dur="1.21s" fill="freeze"/>
+<g clip-path="url(#c)"><rect width="123" height="36" fill="url(#b)"/><rect width="123" height="36" fill="#1fb8cd" fill-opacity=".1"/>
+<rect x="-60" width="40" height="36" fill="url(#sw)" transform="skewX(-20)"><animate attributeName="x" values="-60;-60;183" keyTimes="0;.7;1" dur="7s" begin="1.76s" repeatCount="indefinite"/></rect></g>
+<rect x=".75" y=".75" width="121.5" height="34.5" rx="17.25" fill="none" stroke="#1fb8cd" stroke-opacity=".55" stroke-width="1.5"/>
+<image href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMUZCOENEIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjIuMzk3NyA3LjA4OTZoLTIuMzEwNlYuMDY3NmwtNy41MDk0IDYuMzU0MlYuMTU3N2gtMS4xNTU0djYuMTk2Nkw0LjQ5MDQgMHY3LjA4OTZIMS42MDIzdjEwLjM5NzZoMi44ODgyVjI0bDYuOTMyLTYuMzU5MXY2LjIwMDVoMS4xNTU0di02LjA0NjlsNi45MzE4IDYuMTgwN3YtNi40ODc5aDIuODg4MlY3LjA4OTZ6bS0zLjQ2NTctNC41MzF2NC41MzFoLTUuMzU1bDUuMzU1LTQuNTMxem0tMTMuMjg2Mi4wNjc2IDQuODY5MSA0LjQ2MzRINS42NDU4VjIuNjI2MnpNMi43NTc2IDE2LjMzMlY4LjI0NWg3Ljg0NzZsLTYuMTE0OSA2LjExNDd2MS45NzIzSDIuNzU3NnptMi44ODgyIDUuMDQwNHYtMy44ODUyaC4wMDAxdi0yLjY0ODhsNS43NzYzLTUuNzc2NHY3LjAxMTFsLTUuNzc2NCA1LjI5OTN6bTEyLjcwODYuMDI0OC01Ljc3NjYtNS4xNTA5VjkuMDYxOGw1Ljc3NjYgNS43NzY2djYuNTU4OHptMi44ODgyLTUuMDY1MmgtMS43MzN2LTEuOTcyM0wxMy4zOTQ4IDguMjQ1aDcuODQ3OHY4LjA4N3oiLz48L3N2Zz4=" x="9" y="7" width="22" height="22"/>
+<text x="38" y="23" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13.5" fill="#e6edf7">Perplexity</text></g>
+</svg>

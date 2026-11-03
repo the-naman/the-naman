@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="36" viewBox="0 0 160 36" role="img">
+<title>Web development</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient>
+<linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="160" height="36" rx="18"/></clipPath></defs>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.384;1" dur="0.73s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0" keyTimes="0;0.384;1" dur="0.73s" fill="freeze"/>
+<g clip-path="url(#c)"><rect width="160" height="36" fill="url(#b)"/><rect width="160" height="36" fill="#22d3ee" fill-opacity=".1"/>
+<rect x="-60" width="40" height="36" fill="url(#sw)" transform="skewX(-20)"><animate attributeName="x" values="-60;-60;220" keyTimes="0;.7;1" dur="9s" begin="1.28s" repeatCount="indefinite"/></rect></g>
+<rect x=".75" y=".75" width="158.5" height="34.5" rx="17.25" fill="none" stroke="#22d3ee" stroke-opacity=".55" stroke-width="1.5"/>
+<image href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMjJkM2VlIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4LjM4NyAxNi45MjZoLjYwNHYxLjkzNmgtNi4wODZ2LTEuOTM2aC45MDRzLjMzMy0uMDcyLjI2LS4zODZsLTIuMzkyLTMuNzc2LTEuODkzIDEuODQ3djEuMzIyYzAgLjY1My4zMjQuOTkzLjY4Ny45OTNoLjg0NHYxLjkzNkg1LjQxNHYtMS45MzZoLjc0MWMuMzY0IDAgLjY4OC0uMzQuNjg4LS45OTNWNy45OTJjMC0uMzY0LS4zMjQtLjg1NS0uNjg4LS44NTVoLS43NDFWNS4yMDFoNS45MDF2MS45MzZoLS44NDRjLS4zNjMgMC0uNjg3LjQ5MS0uNjg3Ljg1NXYzLjgzbDQuMDg3LTQuMTQ0YS4zMTYuMzE2IDAgMCAwLS4yMTktLjU0MWgtLjc0N1Y1LjIwMUgxOXYxLjkzNmgtLjg3MmMtLjM2MyAwLS44NjcuMTc2LTEuMjI1LjUyNWwtMy4wNTggMi45ODUgMy4zOTYgNS4yNzZjLjMwNC40MzQuNzcyIDEuMDAzIDEuMTQ2IDEuMDAzek0yNCAxMmMwIDYuNjI3LTUuMzczIDEyLTEyIDEyUzAgMTguNjI3IDAgMTIgNS4zNzMgMCAxMiAwczEyIDUuMzczIDEyIDEyem0tMS42ODQgMGMwLTUuNjk3LTQuNjE5LTEwLjMxNi0xMC4zMTYtMTAuMzE2QzYuMzAzIDEuNjg0IDEuNjg0IDYuMzAzIDEuNjg0IDEyYzAgNS42OTcgNC42MTkgMTAuMzE2IDEwLjMxNiAxMC4zMTYgNS42OTcgMCAxMC4zMTYtNC42MTkgMTAuMzE2LTEwLjMxNnoiLz48L3N2Zz4=" x="9" y="7" width="22" height="22"/>
+<text x="38" y="23" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13.5" fill="#e6edf7">Web development</text></g>
+</svg>

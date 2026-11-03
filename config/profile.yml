@@ -1,0 +1,108 @@
+# Single source of truth for the profile README and the live dashboard.
+# Edit text, links, tooltips and skills here, then run:  python scripts/build_all.py
+# No personal contact data belongs here (no email, no phone, no UPI id): links only.
+
+owner: the-naman                      # GitHub login (stats, trophies, snake)
+dashboard: https://the-naman.github.io/the-naman/
+
+identity:
+  name: Naman
+  role: Data Engineer
+  place: Bengaluru, India
+  map_url: https://www.google.com/maps/place/Bengaluru,+Karnataka,+India
+  map_embed: https://www.google.com/maps?q=Bengaluru,+Karnataka,+India&z=11&output=embed
+  status: Open to Data Engineering roles
+  typing:
+    - "PySpark · Databricks · SQL · Python"
+    - "Building lakehouses: Bronze → Silver → Gold"
+    - "CI/CD, data quality and privacy by design"
+    - "Ex-Capgemini · open to data engineering roles"
+  quotes:                             # typed one by one in the header background
+    - "“Without data, you’re just another person with an opinion.” — W. Edwards Deming"
+    - "“Simplicity is prerequisite for reliability.” — Edsger W. Dijkstra"
+    - "“Make it work, make it right, make it fast.” — Kent Beck"
+    - "“First, solve the problem. Then, write the code.” — John Johnson"
+    - "“What gets measured gets managed.” — Peter Drucker"
+
+buttons:                              # round icon links under the header (key = assets/buttons/<key>.svg)
+  - {key: linkedin, url: "https://www.linkedin.com/in/thenaman", tip: "LinkedIn · linkedin.com/in/thenaman"}
+  - {key: portfolio, url: "https://kumarnaman.com", tip: "Portfolio · kumarnaman.com"}
+  - {key: location, url: map, tip: "Bengaluru, India · open in Google Maps"}
+  - {key: dashboard, url: dashboard, tip: "Live dashboard · hover cards, map and interactive charts"}
+  - {key: support, url: "#support-me", tip: "Support me · Buy Me a Coffee or PayPal"}
+
+about:
+  - "**Data Engineer**, ex-[Capgemini](https://www.capgemini.com/in-en/) (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations."
+  - "I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS."
+  - "**Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git."
+  - "Off the keyboard: ♟️ chess."
+
+project:
+  title: Lakehouse platform
+  url: https://github.com/the-naman/flexi_quant_finance_fd
+  tip: "Open the lakehouse project on GitHub"
+  repos:
+    - {name: flexi_quant_finance_fd, url: "https://github.com/the-naman/flexi_quant_finance_fd", about: "The acquired lender: 8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert"}
+    - {name: bio_health_group_hd, url: "https://github.com/the-naman/bio_health_group_hd", about: "The healthcare parent: its own lakehouse plus the nightly group view across both companies"}
+  note: "Both run on Databricks with dev, test and prod, pull-request approvals, CI checks and tests, column masks and HTML alert mails. All data is synthetic."
+
+# Skills & Tools: each chip links to the official site and shows `info` on hover.
+# logo = assets/logos/<logo>.svg (supplied by the owner); without a file a monogram tile is drawn.
+skills:
+  - group: Data engineering
+    items:
+      - {name: PySpark, logo: apachespark, color: "#e25a1c", url: "https://spark.apache.org/docs/latest/api/python/", info: "Batch and streaming pipelines in the lakehouse: Bronze, Silver and Gold"}
+      - {name: Apache Spark, logo: apachespark, color: "#e25a1c", url: "https://spark.apache.org/", info: "Distributed processing: joins, windows, skew and tuning"}
+      - {name: Databricks, logo: databricks, color: "#ff3621", url: "https://www.databricks.com/", info: "Jobs as code, Asset Bundles, Unity Catalog, dev/test/prod workspaces"}
+      - {name: Delta Lake, logo: delta, color: "#00add4", url: "https://delta.io/", info: "ACID tables, MERGE, SCD2 history, time travel"}
+      - {name: Spark Structured Streaming, logo: apachespark, color: "#e25a1c", url: "https://spark.apache.org/docs/latest/streaming/", info: "Watermarks, de-duplication and 10-minute windows on a Kafka stream"}
+      - {name: Apache Kafka, logo: apachekafka, color: "#e6edf7", url: "https://kafka.apache.org/", info: "Payment events streamed into the lakehouse"}
+      - {name: Informatica, logo: informatica, color: "#ff7d00", url: "https://www.informatica.com/", info: "ETL mappings and workflows"}
+  - group: Languages
+    items:
+      - {name: SQL, logo: sql, color: "#00bcf2", url: "https://en.wikipedia.org/wiki/SQL", info: "Window functions, star schemas, the Gold layer written in SQL"}
+      - {name: Python, logo: python, color: "#ffd43b", url: "https://www.python.org/", info: "Pipelines, CI tooling, alerting and test suites"}
+      - {name: Bash, logo: bash, color: "#4eaa25", url: "https://www.gnu.org/software/bash/", info: "Deploy scripts and server automation"}
+      - {name: JavaScript, logo: javascript, color: "#f7df1e", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", info: "Front ends for personal web projects"}
+      - {name: HTML5, logo: html5, color: "#e34f26", url: "https://developer.mozilla.org/en-US/docs/Web/HTML", info: "Web pages and HTML alert mails"}
+      - {name: CSS3, logo: css, color: "#33a9dc", url: "https://developer.mozilla.org/en-US/docs/Web/CSS", info: "Layouts and animation for web projects"}
+  - group: Databases
+    items:
+      - {name: MySQL, logo: mysql, color: "#4479a1", url: "https://www.mysql.com/", info: "Relational sources and app back ends"}
+      - {name: Oracle Database, logo: oracle, color: "#c74634", url: "https://www.oracle.com/database/", info: "Enterprise relational database"}
+      - {name: Unity Catalog, logo: unitycatalog, color: "#f5b301", url: "https://www.unitycatalog.io/", info: "Catalogs per environment, column masks, row filters, grants"}
+  - group: Cloud & ops
+    items:
+      - {name: Microsoft Azure, logo: azure, color: "#0078d4", url: "https://azure.microsoft.com/", info: "Cloud data services"}
+      - {name: Amazon Web Services, logo: aws, color: "#ff9900", url: "https://aws.amazon.com/", info: "Cloud platform for the lakehouse sources"}
+      - {name: Amazon S3, logo: aws-s3, color: "#e25444", url: "https://aws.amazon.com/s3/", info: "Landing zone for CSV, JSON, Excel, PDF and image files"}
+      - {name: Amazon EC2, logo: aws-ec2, color: "#f58536", url: "https://aws.amazon.com/ec2/", info: "Virtual servers"}
+      - {name: AWS IAM, logo: aws-iam, color: "#759c3e", url: "https://aws.amazon.com/iam/", info: "Least-privilege access for jobs and storage"}
+      - {name: Linux, logo: linux, color: "#e6edf7", url: "https://www.kernel.org/", info: "Ubuntu servers, systemd, nginx hosting"}
+      - {name: Cloudflare, logo: cloudflare, color: "#f38020", url: "https://www.cloudflare.com/", info: "DNS, TLS and caching for personal sites"}
+  - group: BI
+    items:
+      - {name: Microsoft Power BI, logo: powerbi, color: "#f2c811", url: "https://www.microsoft.com/power-platform/products/power-bi", info: "Reports and semantic models"}
+      - {name: Databricks AI/BI Dashboards, logo: databricks, color: "#ff3621", url: "https://www.databricks.com/product/business-intelligence", info: "Masked dashboards per viewer on the lakehouse"}
+  - group: Build & ship
+    items:
+      - {name: Git & GitHub, logo: git, color: "#e6edf7", url: "https://github.com/the-naman", info: "Branch per environment, pull requests with approvals"}
+      - {name: GitHub Actions, logo: githubactions, color: "#2088ff", url: "https://github.com/features/actions", info: "CI checks, tests, deploys, alerts and this profile's daily build"}
+      - {name: Web development, logo: known, color: "#22d3ee", url: "https://kumarnaman.com", info: "kumarnaman.com and other personal sites"}
+  - group: Workplace
+    items:
+      - {name: Google Workspace, logo: gsuite, color: "#c3cbd8", url: "https://workspace.google.com/", info: "Docs, Sheets, Drive and Gmail"}
+      - {name: Microsoft 365, logo: ms365, color: "#d83b01", url: "https://www.microsoft.com/microsoft-365", info: "Excel, Teams and Office"}
+      - {name: ServiceNow, logo: servicenow, color: "#62d84e", url: "https://www.servicenow.com/", info: "Incident and change tickets"}
+  - group: GenAI
+    items:
+      - {name: Claude (Anthropic), logo: claude, color: "#d97757", url: "https://claude.ai/", info: "Coding, reviews and writing"}
+      - {name: ChatGPT (OpenAI), logo: chatgpt, color: "#e6edf7", url: "https://chatgpt.com/", info: "Research and drafting"}
+      - {name: Gemini (Google), logo: gemini, color: "#4f87ed", url: "https://gemini.google.com/", info: "Research and drafting"}
+      - {name: Grok (xAI), logo: grok, color: "#e6edf7", url: "https://grok.com/", info: "Research and drafting"}
+      - {name: Perplexity, logo: perplexity, color: "#1fb8cd", url: "https://www.perplexity.ai/", info: "Search with sources"}
+
+support:                              # an entry with an empty url is left out
+  - {key: buymeacoffee, name: Buy Me a Coffee, sub: "a coffee fuels the next build", color: "#ffdd00", url: "https://buymeacoffee.com/thenaman"}
+  - {key: paypal, name: PayPal, sub: "send any amount, any country", color: "#3b7bbf", url: "https://paypal.me/thenaman"}
+  - {key: paytm, name: Paytm, sub: "UPI and wallet, India", color: "#00baf2", url: ""}   # add a link that shows no phone number

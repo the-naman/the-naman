@@ -1,0 +1,9 @@
+# Lint and format rules for the profile scripts: ruff check scripts && ruff format --check scripts
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "S", "UP"]
+ignore = ["E501"]

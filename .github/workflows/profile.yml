@@ -1,0 +1,61 @@
+# Builds the live parts of the profile every 3 hours and publishes them to the "output" branch:
+#   stats.svg, trophies.svg, data.json   scripts/build_github_stats.py (one GraphQL call, public data only)
+#   snake-dark.svg, snake-light.svg      Platane/snk
+#   index.html + assets/                 scripts/build_dashboard.py (the interactive dashboard)
+# GitHub Pages serves the output branch as the dashboard (Settings -> Pages -> Deploy from branch: output, / root).
+# main holds only the source. Uses the workflow's own token; actions pinned by commit hash; no secrets needed.
+name: profile
+
+on:
+  schedule:
+    - cron: "37 */3 * * *" # every 3 hours at :37 UTC (:07 IST); odd minute, GitHub drops runs at busy minutes
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "config/**", "assets/**", ".github/workflows/profile.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml==6.0.3
+
+      - name: Activity, trophies and dashboard data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/build_github_stats.py "$GITHUB_REPOSITORY_OWNER" dist
+
+      - name: Contribution snake # v3.5.0
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=#22d3ee&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            dist/snake-light.svg?palette=github-light&color_snake=#8b5cf6&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+
+      - name: Interactive dashboard
+        run: python scripts/build_dashboard.py dist
+
+      - name: Publish to the output branch
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd dist
+          git init -q -b output
+          git add .
+          bot="41898282+github-actions[bot]$(printf '\x40')users.noreply.github.com"  # GitHub's no-reply bot address
+          git -c user.name="github-actions[bot]" -c user.email="$bot" commit -qm "profile build $(date -u +%F)"
+          git push -qf "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
+          ls -l

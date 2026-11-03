@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="36" viewBox="0 0 86 36" role="img">
+<title>HTML5</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient>
+<linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="86" height="36" rx="18"/></clipPath></defs>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.628;1" dur="1.21s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0" keyTimes="0;0.628;1" dur="1.21s" fill="freeze"/>
+<g clip-path="url(#c)"><rect width="86" height="36" fill="url(#b)"/><rect width="86" height="36" fill="#e34f26" fill-opacity=".1"/>
+<rect x="-60" width="40" height="36" fill="url(#sw)" transform="skewX(-20)"><animate attributeName="x" values="-60;-60;146" keyTimes="0;.7;1" dur="8s" begin="1.76s" repeatCount="indefinite"/></rect></g>
+<rect x=".75" y=".75" width="84.5" height="34.5" rx="17.25" fill="none" stroke="#e34f26" stroke-opacity=".55" stroke-width="1.5"/>
+<image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NTIgNTIwIj4KICA8cGF0aCBmaWxsPSIjZTM0ZjI2IiBkPSJNNDEgNDYwTDAgMGg0NTFsLTQxIDQ2MC0xODUgNTIiIC8+CiAgPHBhdGggZmlsbD0iI2VmNjUyYSIgZD0iTTIyNiA0NzJsMTQ5LTQxIDM1LTM5NEgyMjYiIC8+CiAgPHBhdGggZmlsbD0iI2VjZWRlZSIgZD0iTTIyNiAyMDhoLTc1bC01LTU4aDgwVjk0SDg0bDE1IDE3MWgxMjd6bTAgMTQ3bC02NC0xNy00LTQ1aC01Nmw3IDg5IDExNyAzMnoiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjI2IDI2NWg2OWwtNyA3My02MiAxN3Y1OWwxMTUtMzIgMTYtMTc0SDIyNnptMC0xNzF2NTZoMTM2bDUtNTZ6Ii8+Cjwvc3ZnPg==" x="9" y="7" width="22" height="22"/>
+<text x="38" y="23" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13.5" fill="#e6edf7">HTML5</text></g>
+</svg>

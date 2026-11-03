@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="36" viewBox="0 0 123 36" role="img">
+<title>Amazon EC2</title>
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient>
+<linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="123" height="36" rx="18"/></clipPath></defs>
+<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.536;1" dur="0.97s" fill="freeze"/><animateTransform attributeName="transform" type="translate" values="0 6;0 6;0 0" keyTimes="0;0.536;1" dur="0.97s" fill="freeze"/>
+<g clip-path="url(#c)"><rect width="123" height="36" fill="url(#b)"/><rect width="123" height="36" fill="#f58536" fill-opacity=".1"/>
+<rect x="-60" width="40" height="36" fill="url(#sw)" transform="skewX(-20)"><animate attributeName="x" values="-60;-60;183" keyTimes="0;.7;1" dur="11s" begin="1.52s" repeatCount="indefinite"/></rect></g>
+<rect x=".75" y=".75" width="121.5" height="34.5" rx="17.25" fill="none" stroke="#f58536" stroke-opacity=".55" stroke-width="1.5"/>
+<image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIj48cGF0aCBmaWxsPSIjOUQ1MDI1IiBkPSJNMS43MDIgMi45OEwxIDMuMzEydjkuMzc2bC43MDIuMzMyIDIuODQyLTQuNzc3TDEuNzAyIDIuOTh6Ii8+PHBhdGggZmlsbD0iI0Y1ODUzNiIgZD0iTTMuMzM5IDEyLjY1N2wtMS42MzcuMzYzVjIuOThsMS42MzcuMzUzdjkuMzI0eiIvPjxwYXRoIGZpbGw9IiM5RDUwMjUiIGQ9Ik0yLjQ3NiAyLjYxMmwuODYzLS40MDYgNC4wOTYgNi4yMTYtNC4wOTYgNS4zNzItLjg2My0uNDA2VjIuNjEyeiIvPjxwYXRoIGZpbGw9IiNGNTg1MzYiIGQ9Ik01LjM4IDEzLjI0OGwtMi4wNDEuNTQ2VjIuMjA2bDIuMDQuNTQ4djEwLjQ5NHoiLz48cGF0aCBmaWxsPSIjOUQ1MDI1IiBkPSJNNC4zIDEuNzVsMS4wOC0uNTEyIDYuMDQzIDcuODY0LTYuMDQzIDUuNjYtMS4wOC0uNTExVjEuNzQ5eiIvPjxwYXRoIGZpbGw9IiNGNTg1MzYiIGQ9Ik03Ljk5OCAxMy44NTZsLTIuNjE4LjkwNlYxLjIzOGwyLjYxOC45MDh2MTEuNzF6Ii8+PHBhdGggZmlsbD0iIzlENTAyNSIgZD0iTTYuNjAyLjY2TDcuOTk4IDBsNi41MzggOC40NTNMNy45OTggMTZsLTEuMzk2LS42NlYuNjZ6Ii8+PHBhdGggZmlsbD0iI0Y1ODUzNiIgZD0iTTE1IDEyLjY4Nkw3Ljk5OCAxNlYwTDE1IDMuMzE0djkuMzcyeiIvPjwvc3ZnPg==" x="9" y="7" width="22" height="22"/>
+<text x="38" y="23" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13.5" fill="#e6edf7">Amazon EC2</text></g>
+</svg>
