@@ -43,7 +43,7 @@ employers:                            # {key} in the about lines becomes the log
 languages:                            # how the "Languages in public repos" bar counts code
   hide: [Visual Basic 6.0, XSLT, Rich Text Format]
   weight:                             # notebooks store outputs too, so their raw size swamps real code
-    Jupyter Notebook: 0.03
+    Jupyter Notebook: 0.002
 
 project:
   title: Lakehouse platform
