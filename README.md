@@ -28,8 +28,7 @@
 | [**flexi_quant_finance_fd**](https://github.com/the-naman/flexi_quant_finance_fd) | The acquired lender: 8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert |
 | [**bio_health_group_hd**](https://github.com/the-naman/bio_health_group_hd) | The healthcare parent: its own lakehouse plus the nightly group view across both companies |
 
-Both run on Databricks with dev, test and prod, pull-request approvals, CI checks and tests, column masks and HTML alert mails. All data is synthetic.
-<sub>Hover any box for details on the [live dashboard](https://the-naman.github.io/the-naman/).</sub>
+Both run on Databricks with dev, test and prod, pull-request approvals, CI checks and tests, column masks and HTML alert mails.
 
 ### Skills & Tools
 
