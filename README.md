@@ -14,7 +14,7 @@
 
 ### About me
 
-- **Data Engineer**, ex-[Capgemini](https://www.capgemini.com/in-en/) (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
+- **Data Engineer**, ex-<a href="https://www.capgemini.com/in-en/" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru."><img src="assets/badges/capgemini.svg" height="22" alt="Capgemini" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru." /></a> (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
 - I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS.
 - **Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git.
 - Off the keyboard: ♟️ chess.
@@ -33,7 +33,7 @@ Both run on Databricks with dev, test and prod, pull-request approvals, CI check
 
 ### Skills & Tools
 
-<sub><b>DATA ENGINEERING</b></sub><br>
+<img src="assets/skills/group-data-engineering.svg" width="100%" alt="Data engineering" /><br>
 <a href="https://spark.apache.org/docs/latest/api/python/" title="PySpark · Batch and streaming pipelines in the lakehouse: Bronze, Silver and Gold"><img src="assets/skills/pyspark.svg" height="36" alt="PySpark" title="PySpark · Batch and streaming pipelines in the lakehouse: Bronze, Silver and Gold" /></a>
 <a href="https://spark.apache.org/" title="Apache Spark · Distributed processing: joins, windows, skew and tuning"><img src="assets/skills/apache-spark.svg" height="36" alt="Apache Spark" title="Apache Spark · Distributed processing: joins, windows, skew and tuning" /></a>
 <a href="https://www.databricks.com/" title="Databricks · Jobs as code, Asset Bundles, Unity Catalog, dev/test/prod workspaces"><img src="assets/skills/databricks.svg" height="36" alt="Databricks" title="Databricks · Jobs as code, Asset Bundles, Unity Catalog, dev/test/prod workspaces" /></a>
@@ -42,7 +42,7 @@ Both run on Databricks with dev, test and prod, pull-request approvals, CI check
 <a href="https://kafka.apache.org/" title="Apache Kafka · Payment events streamed into the lakehouse"><img src="assets/skills/apache-kafka.svg" height="36" alt="Apache Kafka" title="Apache Kafka · Payment events streamed into the lakehouse" /></a>
 <a href="https://www.informatica.com/" title="Informatica · ETL mappings and workflows"><img src="assets/skills/informatica.svg" height="36" alt="Informatica" title="Informatica · ETL mappings and workflows" /></a>
 
-<sub><b>LANGUAGES</b></sub><br>
+<img src="assets/skills/group-languages.svg" width="100%" alt="Languages" /><br>
 <a href="https://en.wikipedia.org/wiki/SQL" title="SQL · Window functions, star schemas, the Gold layer written in SQL"><img src="assets/skills/sql.svg" height="36" alt="SQL" title="SQL · Window functions, star schemas, the Gold layer written in SQL" /></a>
 <a href="https://www.python.org/" title="Python · Pipelines, CI tooling, alerting and test suites"><img src="assets/skills/python.svg" height="36" alt="Python" title="Python · Pipelines, CI tooling, alerting and test suites" /></a>
 <a href="https://www.gnu.org/software/bash/" title="Bash · Deploy scripts and server automation"><img src="assets/skills/bash.svg" height="36" alt="Bash" title="Bash · Deploy scripts and server automation" /></a>
@@ -50,12 +50,12 @@ Both run on Databricks with dev, test and prod, pull-request approvals, CI check
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="HTML5 · Web pages and HTML alert mails"><img src="assets/skills/html5.svg" height="36" alt="HTML5" title="HTML5 · Web pages and HTML alert mails" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS3 · Layouts and animation for web projects"><img src="assets/skills/css3.svg" height="36" alt="CSS3" title="CSS3 · Layouts and animation for web projects" /></a>
 
-<sub><b>DATABASES</b></sub><br>
+<img src="assets/skills/group-databases.svg" width="100%" alt="Databases" /><br>
 <a href="https://www.mysql.com/" title="MySQL · Relational sources and app back ends"><img src="assets/skills/mysql.svg" height="36" alt="MySQL" title="MySQL · Relational sources and app back ends" /></a>
 <a href="https://www.oracle.com/database/" title="Oracle Database · Enterprise relational database"><img src="assets/skills/oracle-database.svg" height="36" alt="Oracle Database" title="Oracle Database · Enterprise relational database" /></a>
 <a href="https://www.unitycatalog.io/" title="Unity Catalog · Catalogs per environment, column masks, row filters, grants"><img src="assets/skills/unity-catalog.svg" height="36" alt="Unity Catalog" title="Unity Catalog · Catalogs per environment, column masks, row filters, grants" /></a>
 
-<sub><b>CLOUD &amp; OPS</b></sub><br>
+<img src="assets/skills/group-cloud-ops.svg" width="100%" alt="Cloud &amp; ops" /><br>
 <a href="https://azure.microsoft.com/" title="Microsoft Azure · Cloud data services"><img src="assets/skills/microsoft-azure.svg" height="36" alt="Microsoft Azure" title="Microsoft Azure · Cloud data services" /></a>
 <a href="https://aws.amazon.com/" title="Amazon Web Services · Cloud platform for the lakehouse sources"><img src="assets/skills/amazon-web-services.svg" height="36" alt="Amazon Web Services" title="Amazon Web Services · Cloud platform for the lakehouse sources" /></a>
 <a href="https://aws.amazon.com/s3/" title="Amazon S3 · Landing zone for CSV, JSON, Excel, PDF and image files"><img src="assets/skills/amazon-s3.svg" height="36" alt="Amazon S3" title="Amazon S3 · Landing zone for CSV, JSON, Excel, PDF and image files" /></a>
@@ -64,21 +64,21 @@ Both run on Databricks with dev, test and prod, pull-request approvals, CI check
 <a href="https://www.kernel.org/" title="Linux · Ubuntu servers, systemd, nginx hosting"><img src="assets/skills/linux.svg" height="36" alt="Linux" title="Linux · Ubuntu servers, systemd, nginx hosting" /></a>
 <a href="https://www.cloudflare.com/" title="Cloudflare · DNS, TLS and caching for personal sites"><img src="assets/skills/cloudflare.svg" height="36" alt="Cloudflare" title="Cloudflare · DNS, TLS and caching for personal sites" /></a>
 
-<sub><b>BI</b></sub><br>
+<img src="assets/skills/group-bi.svg" width="100%" alt="BI" /><br>
 <a href="https://www.microsoft.com/power-platform/products/power-bi" title="Microsoft Power BI · Reports and semantic models"><img src="assets/skills/microsoft-power-bi.svg" height="36" alt="Microsoft Power BI" title="Microsoft Power BI · Reports and semantic models" /></a>
 <a href="https://www.databricks.com/product/business-intelligence" title="Databricks AI/BI Dashboards · Masked dashboards per viewer on the lakehouse"><img src="assets/skills/databricks-ai-bi-dashboards.svg" height="36" alt="Databricks AI/BI Dashboards" title="Databricks AI/BI Dashboards · Masked dashboards per viewer on the lakehouse" /></a>
 
-<sub><b>BUILD &amp; SHIP</b></sub><br>
+<img src="assets/skills/group-build-ship.svg" width="100%" alt="Build &amp; ship" /><br>
 <a href="https://github.com/the-naman" title="Git &amp; GitHub · Branch per environment, pull requests with approvals"><img src="assets/skills/git-github.svg" height="36" alt="Git &amp; GitHub" title="Git &amp; GitHub · Branch per environment, pull requests with approvals" /></a>
 <a href="https://github.com/features/actions" title="GitHub Actions · CI checks, tests, deploys, alerts and this profile&#x27;s daily build"><img src="assets/skills/github-actions.svg" height="36" alt="GitHub Actions" title="GitHub Actions · CI checks, tests, deploys, alerts and this profile&#x27;s daily build" /></a>
 <a href="https://kumarnaman.com" title="Web development · kumarnaman.com and other personal sites"><img src="assets/skills/web-development.svg" height="36" alt="Web development" title="Web development · kumarnaman.com and other personal sites" /></a>
 
-<sub><b>WORKPLACE</b></sub><br>
+<img src="assets/skills/group-workplace.svg" width="100%" alt="Workplace" /><br>
 <a href="https://workspace.google.com/" title="Google Workspace · Docs, Sheets, Drive and Gmail"><img src="assets/skills/google-workspace.svg" height="36" alt="Google Workspace" title="Google Workspace · Docs, Sheets, Drive and Gmail" /></a>
 <a href="https://www.microsoft.com/microsoft-365" title="Microsoft 365 · Excel, Teams and Office"><img src="assets/skills/microsoft-365.svg" height="36" alt="Microsoft 365" title="Microsoft 365 · Excel, Teams and Office" /></a>
 <a href="https://www.servicenow.com/" title="ServiceNow · Incident and change tickets"><img src="assets/skills/servicenow.svg" height="36" alt="ServiceNow" title="ServiceNow · Incident and change tickets" /></a>
 
-<sub><b>GENAI</b></sub><br>
+<img src="assets/skills/group-genai.svg" width="100%" alt="GenAI" /><br>
 <a href="https://claude.ai/" title="Claude (Anthropic) · Coding, reviews and writing"><img src="assets/skills/claude-anthropic.svg" height="36" alt="Claude (Anthropic)" title="Claude (Anthropic) · Coding, reviews and writing" /></a>
 <a href="https://chatgpt.com/" title="ChatGPT (OpenAI) · Research and drafting"><img src="assets/skills/chatgpt-openai.svg" height="36" alt="ChatGPT (OpenAI)" title="ChatGPT (OpenAI) · Research and drafting" /></a>
 <a href="https://gemini.google.com/" title="Gemini (Google) · Research and drafting"><img src="assets/skills/gemini-google.svg" height="36" alt="Gemini (Google)" title="Gemini (Google) · Research and drafting" /></a>
@@ -87,9 +87,23 @@ Both run on Databricks with dev, test and prod, pull-request approvals, CI check
 
 ### GitHub activity
 
-<a href="https://the-naman.github.io/the-naman/#activity" title="Open the interactive activity view (hover days and weeks)"><img src="https://raw.githubusercontent.com/the-naman/the-naman/output/stats.svg" width="100%" alt="GitHub activity: contributions, streaks, repositories, matrix, graph and languages, refreshed every 3 hours" title="Open the interactive activity view (hover days and weeks)" /></a>
+<a href="https://the-naman.github.io/the-naman/#activity" title="GitHub activity, refreshed every 3 hours: contributions and commits in the last 12 months, current and longest streak, public repositories, a 26-week matrix, weekly graph and languages. Open &#x27;Activity details&#x27; below for every number, or click for the interactive dashboard."><img src="https://raw.githubusercontent.com/the-naman/the-naman/output/stats.svg" width="100%" alt="GitHub activity: contributions, streaks, repositories, matrix, graph and languages, refreshed every 3 hours" title="GitHub activity, refreshed every 3 hours: contributions and commits in the last 12 months, current and longest streak, public repositories, a 26-week matrix, weekly graph and languages. Open &#x27;Activity details&#x27; below for every number, or click for the interactive dashboard." /></a>
 
-<a href="https://the-naman.github.io/the-naman/#trophies" title="Open the trophies with their next-rank targets"><img src="https://raw.githubusercontent.com/the-naman/the-naman/output/trophies.svg" width="100%" alt="GitHub trophies, ranked C to SS, refreshed every 3 hours" title="Open the trophies with their next-rank targets" /></a>
+<details>
+<summary><b>Activity details: busiest day and week, monthly totals, every language</b></summary>
+
+<img src="https://raw.githubusercontent.com/the-naman/the-naman/output/activity-details.svg" width="100%" alt="Activity details: summary, contributions per month and languages, refreshed every 3 hours" />
+
+</details>
+
+<a href="https://the-naman.github.io/the-naman/#trophies" title="GitHub trophies, ranked C → B → A → S → SS from live GitHub numbers: contributions, commits, streak, repositories, languages, pull requests, stars and years on GitHub. Open &#x27;Trophy details&#x27; below for the next target of each one."><img src="https://raw.githubusercontent.com/the-naman/the-naman/output/trophies.svg" width="100%" alt="GitHub trophies, ranked C to SS, refreshed every 3 hours" title="GitHub trophies, ranked C → B → A → S → SS from live GitHub numbers: contributions, commits, streak, repositories, languages, pull requests, stars and years on GitHub. Open &#x27;Trophy details&#x27; below for the next target of each one." /></a>
+
+<details>
+<summary><b>Trophy details: your rank and the next target for each trophy</b></summary>
+
+<img src="https://raw.githubusercontent.com/the-naman/the-naman/output/trophy-details.svg" width="100%" alt="Trophy details: rank, next target and thresholds for each trophy" />
+
+</details>
 
 <a href="https://github.com/the-naman" title="Contribution graph">
 <picture>
@@ -105,8 +119,9 @@ If my work helped you, you can support it here. Thank you!
 
 <div align="center">
 
-<a href="https://buymeacoffee.com/thenaman" title="Buy Me a Coffee · a coffee fuels the next build"><img src="assets/support/buymeacoffee.svg" width="270" alt="Buy Me a Coffee" title="Buy Me a Coffee · a coffee fuels the next build" /></a>
-<a href="https://paypal.me/thenaman" title="PayPal · send any amount, any country"><img src="assets/support/paypal.svg" width="270" alt="PayPal" title="PayPal · send any amount, any country" /></a>
+<a href="https://www.buymeacoffee.com/" title="Buy Me a Coffee · a coffee fuels the next build"><img src="assets/support/buymeacoffee.svg" width="270" alt="Buy Me a Coffee" title="Buy Me a Coffee · a coffee fuels the next build" /></a>
+<a href="https://www.paypal.com/" title="PayPal · send any amount, any country"><img src="assets/support/paypal.svg" width="270" alt="PayPal" title="PayPal · send any amount, any country" /></a>
+<a href="https://paytm.com/" title="Paytm · UPI and wallet, India"><img src="assets/support/paytm.svg" width="270" alt="Paytm" title="Paytm · UPI and wallet, India" /></a>
 
 </div>
 

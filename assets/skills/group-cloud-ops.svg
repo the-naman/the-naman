@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="40" viewBox="0 0 820 40" role="img">
+<title>Cloud &amp; ops</title>
+<defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#f59e0b"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="9" width="5" height="22" rx="2.5" fill="#f59e0b"/>
+<text x="16" y="27" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="18" letter-spacing=".6" fill="#f59e0b">Cloud &amp; ops</text>
+<text x="151" y="27" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="12.5" fill="#93a1bd">7 tools</text>
+<rect x="213" y="19" height="2" rx="1" width="607" fill="url(#l)">
+<animate attributeName="width" values="0;0;607" keyTimes="0;.2;1" dur="1.6s" fill="freeze"/></rect>
+</svg>

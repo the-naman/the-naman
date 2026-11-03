@@ -24,6 +24,31 @@ def link_img(url, src, tip, alt, size=""):
     return f'<a href="{t(url)}" title="{t(tip)}"><img src="{t(src)}" {size}alt="{t(alt)}" title="{t(tip)}" /></a>'
 
 
+def employer_links(line, cfg):
+    """{key} in an about line -> the employer's logo badge, linked, with a tooltip."""
+    for key, e in (cfg.get("employers") or {}).items():
+        tip = f"{e['name']} · {e['info']}"
+        html_ = (
+            f'<a href="{t(e["url"])}" title="{t(tip)}"><img src="assets/badges/{t(key)}.svg" height="22" '
+            f'alt="{t(e["name"])}" title="{t(tip)}" /></a>'
+        )
+        line = line.replace("{" + key + "}", html_)
+    return line
+
+
+def details(summary, src, alt):
+    """A GitHub collapsible panel: one click opens a live detail card in place."""
+    return [
+        "<details>",
+        f"<summary><b>{t(summary)}</b></summary>",
+        "",
+        f'<img src="{t(src)}" width="100%" alt="{t(alt)}" />',
+        "",
+        "</details>",
+        "",
+    ]
+
+
 def build(cfg):
     idt, dash, owner = cfg["identity"], cfg["dashboard"], cfg["owner"]
     raw = lambda f: RAW.format(owner=owner, file=f)  # noqa: E731
@@ -46,7 +71,7 @@ def build(cfg):
         )
     out.append("&nbsp;&nbsp;\n".join(buttons))
     out += ["", "</div>", "", '<img src="assets/hero/divider.svg" width="100%" alt="" />', "", "### About me", ""]
-    out += [f"- {line}" for line in cfg["about"]]
+    out += [f"- {employer_links(line, cfg)}" for line in cfg["about"]]
     p = cfg["project"]
     out += [
         "",
@@ -74,7 +99,7 @@ def build(cfg):
         "",
     ]
     for g in cfg["skills"]:
-        out.append(f"<sub><b>{t(g['group'].upper())}</b></sub><br>")
+        out.append(f'<img src="assets/skills/group-{slug(g["group"])}.svg" width="100%" alt="{t(g["group"])}" /><br>')
         out.append(
             "\n".join(
                 link_img(
@@ -94,19 +119,33 @@ def build(cfg):
         link_img(
             f"{dash}#activity",
             raw("stats.svg"),
-            "Open the interactive activity view (hover days and weeks)",
+            "GitHub activity, refreshed every 3 hours: contributions and commits in the last 12 months, current and "
+            "longest streak, public repositories, a 26-week matrix, weekly graph and languages. "
+            "Open 'Activity details' below for every number, or click for the interactive dashboard.",
             "GitHub activity: contributions, streaks, repositories, matrix, graph and languages, refreshed every 3 hours",
             'width="100%" ',
         ),
         "",
+        *details(
+            "Activity details: busiest day and week, monthly totals, every language",
+            raw("activity-details.svg"),
+            "Activity details: summary, contributions per month and languages, refreshed every 3 hours",
+        ),
         link_img(
             f"{dash}#trophies",
             raw("trophies.svg"),
-            "Open the trophies with their next-rank targets",
+            "GitHub trophies, ranked C → B → A → S → SS from live GitHub numbers: contributions, commits, streak, "
+            "repositories, languages, pull requests, stars and years on GitHub. Open 'Trophy details' below for the "
+            "next target of each one.",
             "GitHub trophies, ranked C to SS, refreshed every 3 hours",
             'width="100%" ',
         ),
         "",
+        *details(
+            "Trophy details: your rank and the next target for each trophy",
+            raw("trophy-details.svg"),
+            "Trophy details: rank, next target and thresholds for each trophy",
+        ),
         f'<a href="https://github.com/{owner}" title="Contribution graph">',
         "<picture>",
         f'  <source media="(prefers-color-scheme: dark)" srcset="{raw("snake-dark.svg")}" />',

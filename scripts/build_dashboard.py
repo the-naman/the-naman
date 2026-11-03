@@ -17,6 +17,7 @@ from pathlib import Path
 
 import yaml
 
+from build_readme_assets import GROUP_COLORS
 from svg_kit import ROOT
 
 
@@ -104,7 +105,8 @@ h2::after{content:"";flex:1;height:1px;background:var(--line)}
 ul.about{margin:0;padding-left:20px}ul.about li{margin:4px 0}
 table{border-collapse:collapse;width:100%;margin:14px 0}td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
 .group{display:grid;grid-template-columns:150px 1fr;gap:10px;margin:10px 0;align-items:start}
-.group .label{font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--muted);padding-top:9px;text-transform:uppercase}
+.group{border-left:4px solid var(--g);padding-left:14px;margin:18px 0}
+.group .label{font-size:16px;font-weight:800;color:var(--g);padding-top:6px}.group .label small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;border-radius:999px;text-decoration:none;color:var(--ink);
 border:1.5px solid color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 10%,var(--card2));
@@ -135,7 +137,8 @@ background:color-mix(in srgb,var(--c) 6%,transparent);cursor:help;animation:rise
 .support a{transition:transform .2s}.support a:hover{transform:translateY(-2px)}
 #tip{position:fixed;z-index:9;max-width:300px;pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;
 background:#0b1020f2;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:10px 12px;font-size:13px;box-shadow:0 12px 30px -10px #000}
-#tip.on{opacity:1;transform:none}#tip b{display:block;margin-bottom:2px}#tip span{color:var(--muted)}
+#tip.on{opacity:1;transform:none}#tip img.logo{display:block;height:34px;max-width:160px;margin:2px 0 8px;
+background:#fff;border-radius:8px;padding:6px 10px}#tip b{display:block;margin-bottom:2px}#tip span{color:var(--muted)}
 #map{position:fixed;z-index:10;width:320px;height:230px;border-radius:14px;overflow:hidden;opacity:0;pointer-events:none;
 transition:opacity .2s;border:1px solid rgba(255,255,255,.2);box-shadow:0 18px 40px -12px #000;background:#0b1020}
 #map.on{opacity:1;pointer-events:auto}#map iframe{width:100%;height:100%;border:0}
@@ -153,7 +156,8 @@ let mapHide;
 function place(el, x, y){const r = el.getBoundingClientRect(), vw = innerWidth, vh = innerHeight;
   let l = x + 14, t = y + 14; if (l + r.width > vw - 8) l = x - r.width - 14; if (t + r.height > vh - 8) t = y - r.height - 14;
   el.style.left = Math.max(8, l) + 'px'; el.style.top = Math.max(8, t) + 'px';}
-function showTip(title, text, x, y){tip.replaceChildren();
+function showTip(title, text, x, y, img){tip.replaceChildren();
+  if (img){const i = document.createElement('img'); i.src = img; i.alt = ''; i.className = 'logo'; tip.append(i);}
   const b = document.createElement('b'); b.textContent = title; tip.append(b);
   if (text){const s = document.createElement('span'); s.textContent = text; tip.append(s);}
   tip.classList.add('on'); place(tip, x, y);}
@@ -164,14 +168,14 @@ function showMap(x, y){clearTimeout(mapHide);
   map.classList.add('on'); place(map, x, y);}
 function hideMapSoon(){mapHide = setTimeout(() => map.classList.remove('on'), 350);}
 map.addEventListener('mouseenter', () => clearTimeout(mapHide)); map.addEventListener('mouseleave', hideMapSoon);
-function bind(el, title, text){
+function bind(el, title, text, img){
   const on = e => { const p = e.touches ? e.touches[0] : e; const r = el.getBoundingClientRect();
     const x = p && p.clientX !== undefined ? p.clientX : r.right, y = p && p.clientY !== undefined ? p.clientY : r.bottom;
-    title === 'map' ? showMap(x, y) : showTip(title, text, x, y); };
+    title === 'map' ? showMap(x, y) : showTip(title, text, x, y, img); };
   el.addEventListener('mouseenter', on); el.addEventListener('mousemove', e => title === 'map' || place(tip, e.clientX, e.clientY));
   el.addEventListener('focus', on); el.addEventListener('touchstart', on, {passive: true});
   el.addEventListener('mouseleave', () => title === 'map' ? hideMapSoon() : hideTip()); el.addEventListener('blur', () => title === 'map' ? hideMapSoon() : hideTip());}
-document.querySelectorAll('[data-tip-title]').forEach(el => bind(el, el.dataset.tipTitle, el.dataset.tipText || ''));
+document.querySelectorAll('[data-tip-title]').forEach(el => bind(el, el.dataset.tipTitle, el.dataset.tipText || '', el.dataset.tipImg));
 document.addEventListener('scroll', hideTip, {passive: true});
 
 // matrix: the last 53 weeks, GitHub green, a tooltip per day
@@ -255,7 +259,9 @@ def page(cfg, data):
             )
             n += 1
         groups.append(
-            f'<div class="group"><div class="label">{a(g["group"])}</div><div class="chips">{"".join(chips)}</div></div>'
+            f'<div class="group" style="--g:{GROUP_COLORS[len(groups) % len(GROUP_COLORS)]}"><div class="label">{a(g["group"])}'
+            f"<small>{len(g['items'])} tool{'s' if len(g['items']) != 1 else ''}</small></div>"
+            f'<div class="chips">{"".join(chips)}</div></div>'
         )
 
     tiles = [
@@ -323,7 +329,18 @@ def page(cfg, data):
         f'<tr><td><a href="{a(r["url"])}" target="_blank" rel="noopener"><b>{a(r["name"])}</b></a></td><td>{a(r["about"])}</td></tr>'
         for r in cfg["project"]["repos"]
     )
-    about = "".join(f"<li>{md_inline(x)}</li>" for x in cfg["about"])
+
+    def employers(text):
+        for key, e in (cfg.get("employers") or {}).items():
+            tag = (
+                f'<a href="{a(e["url"])}" target="_blank" rel="noopener" data-tip-title="{a(e["name"])}" '
+                f'data-tip-text="{a(e["info"])}" data-tip-img="assets/logos/{a(e["logo"])}.svg">'
+                f'<img src="assets/badges/{a(key)}.svg" alt="{a(e["name"])}" style="height:22px;vertical-align:-6px"></a>'
+            )
+            text = text.replace(a("{" + key + "}"), tag)
+        return text
+
+    about = "".join(f"<li>{employers(md_inline(x))}</li>" for x in cfg["about"])
     payload = json.dumps({"days": data["days"]}).replace("</", "<\\/")
 
     return f"""<!doctype html>
@@ -377,7 +394,14 @@ def main():
     out = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
     cfg = yaml.safe_load((ROOT / "config" / "profile.yml").read_text(encoding="utf-8"))
     data = json.loads((out / "data.json").read_text(encoding="utf-8"))
-    for sub in ("hero", "buttons", "project", "support", "logos"):  # the page uses the same artwork as the README
+    for sub in (
+        "hero",
+        "buttons",
+        "project",
+        "support",
+        "logos",
+        "badges",
+    ):  # the page uses the same artwork as the README
         shutil.copytree(ROOT / "assets" / sub, out / "assets" / sub, dirs_exist_ok=True)
     (out / "index.html").write_text(page(cfg, data), encoding="utf-8")
     (out / ".nojekyll").write_text("", encoding="utf-8")

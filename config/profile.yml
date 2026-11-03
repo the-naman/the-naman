@@ -32,10 +32,18 @@ buttons:                              # round icon links under the header (key =
   - {key: support, url: "#support-me", tip: "Support me · Buy Me a Coffee or PayPal"}
 
 about:
-  - "**Data Engineer**, ex-[Capgemini](https://www.capgemini.com/in-en/) (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations."
+  - "**Data Engineer**, ex-{capgemini} (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations."
   - "I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS."
   - "**Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git."
   - "Off the keyboard: ♟️ chess."
+
+employers:                            # {key} in the about lines becomes the logo + name, linked, with a hover card
+  capgemini: {name: Capgemini, logo: capgemini, url: "https://www.capgemini.com/in-en/", info: "Global IT services and consulting company; data engineering work in Bengaluru."}
+
+languages:                            # how the "Languages in public repos" bar counts code
+  hide: [Visual Basic 6.0, XSLT, Rich Text Format]
+  weight:                             # notebooks store outputs too, so their raw size swamps real code
+    Jupyter Notebook: 0.03
 
 project:
   title: Lakehouse platform
@@ -102,7 +110,7 @@ skills:
       - {name: Grok (xAI), logo: grok, color: "#e6edf7", url: "https://grok.com/", info: "Research and drafting"}
       - {name: Perplexity, logo: perplexity, color: "#1fb8cd", url: "https://www.perplexity.ai/", info: "Search with sources"}
 
-support:                              # an entry with an empty url is left out
-  - {key: buymeacoffee, name: Buy Me a Coffee, sub: "a coffee fuels the next build", color: "#ffdd00", url: "https://buymeacoffee.com/thenaman"}
-  - {key: paypal, name: PayPal, sub: "send any amount, any country", color: "#3b7bbf", url: "https://paypal.me/thenaman"}
-  - {key: paytm, name: Paytm, sub: "UPI and wallet, India", color: "#00baf2", url: ""}   # add a link that shows no phone number
+support:                              # official sites (no account names in the links)
+  - {key: buymeacoffee, name: Buy Me a Coffee, sub: "a coffee fuels the next build", color: "#ffdd00", url: "https://www.buymeacoffee.com/"}
+  - {key: paypal, name: PayPal, sub: "send any amount, any country", color: "#3b7bbf", url: "https://www.paypal.com/"}
+  - {key: paytm, name: Paytm, sub: "UPI and wallet, India", color: "#00baf2", url: "https://paytm.com/"}

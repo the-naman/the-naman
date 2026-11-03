@@ -416,13 +416,129 @@ def render_trophies(d):
     return card(h, "".join(body), dots(W, h) + aurora_defs())
 
 
+def tidy_languages(langs, rules):
+    """Apply config/profile.yml -> languages: hide some, scale others (notebooks also store their outputs)."""
+    hide, weight = set(rules.get("hide") or []), rules.get("weight") or {}
+    return {n: (round(sz * float(weight.get(n, 1))), c) for n, (sz, c) in langs.items() if n not in hide and sz}
+
+
+def details_card(title, icon_name, sections):
+    """A tall card of label/value rows in columns (dist/*-details.svg), shown when a README panel is opened.
+    sections = [(heading, [(label, value, colour or None), ...]), ...] laid out two per row."""
+    col_w, row_h, head_h = (W - 64 - 24) / 2, 22, 34
+    heights = [head_h + row_h * len(rows) + 14 for _, rows in sections]
+    rows_of_two = [sections[i : i + 2] for i in range(0, len(sections), 2)]
+    h = 70 + sum(max(heights[i], heights[i + 1] if i + 1 < len(heights) else 0) for i in range(0, len(sections), 2))
+    body = [
+        f'<rect width="{W}" height="{h}" fill="url(#dots)"/>',
+        icon(icon_name, 32, 22, CYAN, 22),
+        f'<text x="62" y="40" font-family="{FONT}" font-weight="800" font-size="20" fill="{INK}">{escape(title)}</text>',
+    ]
+    y, n = 66, 0
+    for pair in rows_of_two:
+        tallest = 0
+        for k, (heading, rows) in enumerate(pair):
+            x = 32 + k * (col_w + 24)
+            ch = head_h + row_h * len(rows) + 6
+            tallest = max(tallest, ch)
+            body.append(
+                f"<g>{appear(0.1 + n * 0.12, 0.5, 8)}"
+                f'<rect x="{x}" y="{y}" width="{col_w}" height="{ch}" rx="12" fill="#ffffff" fill-opacity=".03" '
+                f'stroke="#ffffff" stroke-opacity=".08"/>'
+                f'<text x="{x + 16}" y="{y + 23}" font-family="{FONT}" font-weight="700" font-size="13" '
+                f'fill="{INK}">{escape(heading)}</text>'
+            )
+            for r, (label, value, color) in enumerate(rows):
+                ry = y + head_h + 14 + r * row_h
+                dot = f'<circle cx="{x + 21}" cy="{ry - 4}" r="4.5" fill="{color}"/>' if color else ""
+                lx = x + (32 if color else 16)
+                body.append(
+                    f'{dot}<text x="{lx}" y="{ry}" font-family="{FONT}" font-size="12.5" fill="{MUTED}">'
+                    f'{escape(str(label))}</text><text x="{x + col_w - 16}" y="{ry}" text-anchor="end" '
+                    f'font-family="{FONT}" font-size="12.5" font-weight="600" fill="{INK}">{escape(str(value))}</text>'
+                )
+            body.append("</g>")
+            n += 1
+        y += tallest + 14
+    return card(h, "".join(body), dots(W, h))
+
+
+def activity_details(d, updated):
+    days = d["days"]
+    cur, best = streaks(days)
+    active = [c for _, c in days if c]
+    busiest_day = max(days, key=lambda x: x[1]) if days else ("-", 0)
+    weeks = [(days[i][0], sum(c for _, c in days[i : i + 7])) for i in range(len(days) % 7, len(days), 7)]
+    busiest_week = max(weeks, key=lambda x: x[1]) if weeks else ("-", 0)
+    months = {}
+    for day, c in days:
+        months[day[:7]] = months.get(day[:7], 0) + c
+    nice = lambda iso: datetime.strptime(iso, "%Y-%m-%d").strftime("%d %b %Y")  # noqa: E731
+    month_rows = [
+        (datetime.strptime(m, "%Y-%m").strftime("%b %Y"), f"{v:,}", None) for m, v in sorted(months.items())[-12:]
+    ]
+    langs = d["langs"]
+    tot = sum(sz for sz, _ in langs.values()) or 1
+    lang_rows = [
+        (n, f"{100 * sz / tot:.1f}%", c) for n, (sz, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])[:12]
+    ]
+    summary = [
+        ("Contributions, 12 months", f"{d['total']:,}", None),
+        ("Commits", f"{d['commits']:,}", None),
+        ("Pull requests", f"{d['prs']:,}", None),
+        ("Reviews", f"{d['reviews']:,}", None),
+        ("Active days", f"{len(active)} of {len(days)}", None),
+        ("Average on an active day", f"{sum(active) / max(len(active), 1):.1f}", None),
+        ("Busiest day", f"{busiest_day[1]} on {nice(busiest_day[0])}" if active else "-", None),
+        ("Busiest week", f"{busiest_week[1]} from {nice(busiest_week[0])}" if active else "-", None),
+        ("Current / longest streak", f"{cur} / {best} days", None),
+        ("Public repositories / stars", f"{d['repos']} / {d['stars']}", None),
+        ("Refreshed", updated, None),
+    ]
+    return details_card(
+        "Activity details",
+        "chart",
+        [("Summary", summary), ("Contributions per month", month_rows), ("Languages in public repos", lang_rows)],
+    )
+
+
+def trophy_details(d):
+    names = ["C", "B", "A", "S", "SS"]
+    rows = []
+    for label, value, steps, _ in trophy_items(d):
+        r, color = rank(value, steps)
+        nxt = next(((nm, st) for nm, st in zip(names, steps, strict=True) if value < st), None)
+        rows.append(
+            (f"{label} ({value})", f"rank {r} · next {nxt[0]} at {nxt[1]}" if nxt else f"rank {r} · top rank", color)
+        )
+    ladder = [
+        (lab, " · ".join(f"{nm} {st}" for nm, st in zip(names, steps, strict=True)), None)
+        for lab, _, steps, _ in trophy_items(d)
+    ]
+    return details_card(
+        "Trophy details", "trophy", [("Your ranks and the next target", rows), ("Rank thresholds (C → SS)", ladder)]
+    )
+
+
 def main():
     login, outdir = sys.argv[1], Path(sys.argv[2])
     d = sample() if "--sample" in sys.argv else fetch(login)
+    cfg_path = Path(__file__).resolve().parents[1] / "config" / "profile.yml"
+    rules = {}
+    if cfg_path.exists():  # pyyaml is installed by the workflow; without it the raw numbers are used
+        try:
+            import yaml
+
+            rules = (yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}).get("languages") or {}
+        except ImportError:
+            pass
+    d["langs"] = tidy_languages(d["langs"], rules)
     outdir.mkdir(parents=True, exist_ok=True)
     updated = datetime.now(IST).strftime("%d %b %H:%M IST")
     (outdir / "stats.svg").write_text(render_stats(d, updated), encoding="utf-8")
     (outdir / "trophies.svg").write_text(render_trophies(d), encoding="utf-8")
+    (outdir / "activity-details.svg").write_text(activity_details(d, updated), encoding="utf-8")
+    (outdir / "trophy-details.svg").write_text(trophy_details(d), encoding="utf-8")
     cur, best = streaks(d["days"])
     data = {
         "updated": updated,

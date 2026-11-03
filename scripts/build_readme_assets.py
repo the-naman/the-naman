@@ -205,6 +205,36 @@ def chart_icon(color):
     )
 
 
+def employer_badge(key):
+    """Small white badge with an employer's logo (assets/badges/<key>.svg), readable on GitHub's light and dark themes."""
+    w, h = 96, 26
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img">
+<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="7" fill="#ffffff" stroke="#d0d7de"/>
+<g>{appear(0.2, 0.5)}<svg x="8" y="2" width="{w - 16}" height="{h - 4}" viewBox="0 -19.94 159.45 69.59">{(ASSETS / "logos" / f"{key}.svg").read_text(encoding="utf-8").split(">", 1)[1].rsplit("</svg>", 1)[0]}</svg></g>
+</svg>
+"""
+
+
+GROUP_COLORS = ["#22d3ee", "#a78bfa", "#38bdf8", "#f59e0b", "#facc15", "#34d399", "#60a5fa", "#f472b6"]
+
+
+def group_label(name, count, color):
+    """Section label above a skill group (assets/skills/group-<slug>.svg): bold title, item count, an accent line
+    that draws itself, so every chip below clearly belongs to it."""
+    w, h = 820, 40
+    tw = round(len(name) * 11.2 + 28)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img">
+<title>{escape(name)}</title>
+<defs><linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="{color}"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="9" width="5" height="22" rx="2.5" fill="{color}"/>
+<text x="16" y="27" font-family="{FONT}" font-weight="800" font-size="18" letter-spacing=".6" fill="{color}">{escape(name)}</text>
+<text x="{tw}" y="27" font-family="{FONT}" font-size="12.5" fill="{MUTED}">{count} {"tool" if count == 1 else "tools"}</text>
+<rect x="{tw + 62}" y="19" height="2" rx="1" width="{w - tw - 62}" fill="url(#l)">
+<animate attributeName="width" values="0;0;{w - tw - 62}" keyTimes="0;.2;1" dur="1.6s" fill="freeze"/></rect>
+</svg>
+"""
+
+
 def skill_chip(item, index):
     """One skill (assets/skills/<slug>.svg): dark pill with the logo and the official name; fades in, then a light
     sweep passes over it now and then. Its own dark background keeps it readable on GitHub's light and dark themes."""
@@ -262,10 +292,17 @@ def main():
         icon, color, beat = icons[b["key"]]
         write(ASSETS / "buttons" / f"{b['key']}.svg", icon_button(icon, color, beat))
     n = 0
-    for group in cfg["skills"]:
+    for gi, group in enumerate(cfg["skills"]):
+        color = GROUP_COLORS[gi % len(GROUP_COLORS)]
+        write(
+            ASSETS / "skills" / f"group-{slug(group['group'])}.svg",
+            group_label(group["group"], len(group["items"]), color),
+        )
         for item in group["items"]:
             write(ASSETS / "skills" / f"{slug(item['name'])}.svg", skill_chip(item, n))
             n += 1
+    for key, e in (cfg.get("employers") or {}).items():
+        write(ASSETS / "badges" / f"{key}.svg", employer_badge(e["logo"]))
     for s in cfg["support"]:
         if not s["url"]:  # no link yet: no card
             continue
