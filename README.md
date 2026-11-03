@@ -14,7 +14,7 @@
 
 ### About me
 
-- **Data Engineer**, ex-<a href="https://www.capgemini.com/in-en/" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru.">Capgemini</a> (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
+- **Data Engineer**, Ex-<a href="https://www.capgemini.com/in-en/" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru.">Capgemini</a> (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
 - I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS.
 - **Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git.
 - Off the keyboard: ♟️ chess.
