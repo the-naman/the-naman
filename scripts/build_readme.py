@@ -25,14 +25,11 @@ def link_img(url, src, tip, alt, size=""):
 
 
 def employer_links(line, cfg):
-    """{key} in an about line -> the employer's logo badge, linked, with a tooltip."""
+    """{key} in an about line -> the employer's name as a link with a tooltip. (GitHub cannot show a picture on hover;
+    the dashboard shows the logo card.)"""
     for key, e in (cfg.get("employers") or {}).items():
         tip = f"{e['name']} · {e['info']}"
-        html_ = (
-            f'<a href="{t(e["url"])}" title="{t(tip)}"><img src="assets/badges/{t(key)}.svg" height="22" '
-            f'alt="{t(e["name"])}" title="{t(tip)}" /></a>'
-        )
-        line = line.replace("{" + key + "}", html_)
+        line = line.replace("{" + key + "}", f'<a href="{t(e["url"])}" title="{t(tip)}">{t(e["name"])}</a>')
     return line
 
 
