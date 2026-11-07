@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient></defs>
+<circle cx="32" cy="32" r="26" fill="url(#b)" stroke="#f43f5e" stroke-opacity=".7" stroke-width="1.5"/>
+<circle cx="32" cy="32" r="26" fill="none" stroke="#f43f5e">
+<animate attributeName="r" values="26;31;26" dur="2.6s" repeatCount="indefinite"/>
+<animate attributeName="stroke-opacity" values=".55;0;.55" dur="2.6s" repeatCount="indefinite"/></circle>
+<g transform="translate(32 32)"><g><g transform="translate(-14 -14)"><g transform="translate(7 2) scale(1.0)"><ellipse cx="7" cy="21" rx="4" ry="1.5" fill="#f43f5e" opacity=".35"><animate attributeName="rx" values="3;6;3" dur="2.2s" repeatCount="indefinite"/></ellipse><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="2.2s" repeatCount="indefinite"/><path d="M7 20c-4.6-5.6-7-9.3-7-12.6a7 7 0 0 1 14 0c0 3.3-2.4 7-7 12.6z" fill="#f43f5e"/><circle cx="7" cy="7.2" r="2.6" fill="#0b1020"/></g></g></g></g></g>
+</svg>

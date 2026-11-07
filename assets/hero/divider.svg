@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="26" viewBox="0 0 860 26">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+<stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient></defs>
+<path d="M0 13 Q 107.5 3 215.0 13 T 430.0 13 T 645.0 13 T 860 13" fill="none" stroke="url(#g)" stroke-width="2">
+<animate attributeName="d" dur="5s" repeatCount="indefinite" values="M0 13 Q 107.5 3 215.0 13 T 430.0 13 T 645.0 13 T 860 13;M0 13 Q 107.5 23 215.0 13 T 430.0 13 T 645.0 13 T 860 13;M0 13 Q 107.5 3 215.0 13 T 430.0 13 T 645.0 13 T 860 13"/></path>
+<circle r="3.5" fill="#22d3ee"><animateMotion dur="5s" repeatCount="indefinite" path="M0 13 L860 13"/></circle>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient></defs>
+<circle cx="32" cy="32" r="26" fill="url(#b)" stroke="#34d399" stroke-opacity=".7" stroke-width="1.5"/>
+<circle cx="32" cy="32" r="26" fill="none" stroke="#34d399">
+<animate attributeName="r" values="26;31;26" dur="2.6s" repeatCount="indefinite"/>
+<animate attributeName="stroke-opacity" values=".55;0;.55" dur="2.6s" repeatCount="indefinite"/></circle>
+<g transform="translate(32 32)"><g><g transform="translate(-14 -14)"><g fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v22h22"/><path d="M7 19l5-6 4 3 7-9"><animate attributeName="stroke-dasharray" values="0 40;40 0" dur="2.4s" repeatCount="indefinite"/></path></g></g></g></g>
+</svg>
