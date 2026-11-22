@@ -35,6 +35,7 @@ about:
   - "**Data Engineer**, ex-{capgemini} (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations."
   - "I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS."
   - "**Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git."
+  - "I also build and run my own sites on a hardened Linux server behind Cloudflare, starting with [kumarnaman.com](https://kumarnaman.com)."
   - "Off the keyboard: ♟️ chess."
 
 employers:                            # {key} in the about lines becomes the logo + name, linked, with a hover card
@@ -46,13 +47,25 @@ languages:                            # how the "Languages in public repos" bar 
     Jupyter Notebook: 0.002
 
 project:
-  title: Lakehouse platform
-  url: https://github.com/the-naman/flexi_quant_finance_fd
-  tip: "Open the lakehouse project on GitHub"
-  repos:
-    - {name: flexi_quant_finance_fd, url: "https://github.com/the-naman/flexi_quant_finance_fd", about: "The acquired lender: 8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert"}
-    - {name: bio_health_group_hd, url: "https://github.com/the-naman/bio_health_group_hd", about: "The healthcare parent: its own lakehouse plus the nightly group view across both companies"}
-  note: "Both run on Databricks with dev, test and prod, pull-request approvals, CI checks and tests, column masks and HTML alert mails. All data is synthetic."
+  title: Group Lakehouse
+  url: https://github.com/the-naman/bhg-fqf-lakehouse
+  tip: "Open the Group Lakehouse on GitHub: both projects in one repo"
+  intro: "One end-to-end **Databricks lakehouse** for a healthcare group and the lender it acquired. Start at **[bhg-fqf-lakehouse](https://github.com/the-naman/bhg-fqf-lakehouse)**: it brings both company repos together as submodules on their production branches, with the shared architecture and results."
+  repos:                              # role = the repo's part in the project
+    - {name: bhg-fqf-lakehouse, role: Start here, url: "https://github.com/the-naman/bhg-fqf-lakehouse", about: "Both projects in one place: shared README, architecture and results. Each folder is a submodule on that repo's prod branch"}
+    - {name: bio_health_group_hd, role: Parent, url: "https://github.com/the-naman/bio_health_group_hd", about: "The healthcare parent: its own lakehouse plus the nightly group view across both companies"}
+    - {name: flexi_quant_finance_fd, role: Acquired lender, url: "https://github.com/the-naman/flexi_quant_finance_fd", about: "8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert"}
+  highlights:                         # numbers from the bhg-fqf-lakehouse README (prod)
+    - "**Messy sources:** 24 tables in 6 formats, including a PDF bank statement and OCR of deposit-slip images"
+    - "**Group view:** 401 people matched across the two companies; intercompany money counted once"
+    - "**Real time:** Kafka → Structured Streaming → 10-minute windows → a failed-payment alert, mailed once"
+    - "**Release safety:** dev → test → prod by pull request with approvals, 10 checks, tests and CodeQL; Asset Bundles validated in CI"
+    - "**Performance:** prod daily runs cut from 11–14 min to 7–10 min after measured tuning"
+  clone: "git clone --recurse-submodules https://github.com/the-naman/bhg-fqf-lakehouse.git"
+  links:
+    - {name: "Plain-language walkthrough with diagrams", url: "https://kumarnaman.com/blog/databricks-lakehouse-explained"}
+    - {name: Portfolio, url: "https://kumarnaman.com"}
+  note: "Column masks, keyed tokens, row filters and service principals throughout; secrets only in GitHub secrets and Databricks secret scopes. All data is synthetic."
 
 # Skills & Tools: each chip links to the official site and shows `info` on hover.
 # logo = assets/logos/<logo>.svg (supplied by the owner); without a file a monogram tile is drawn.

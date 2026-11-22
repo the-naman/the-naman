@@ -326,7 +326,7 @@ def page(cfg, data):
         if s["url"]
     )
     repos = "".join(
-        f'<tr><td><a href="{a(r["url"])}" target="_blank" rel="noopener"><b>{a(r["name"])}</b></a></td><td>{a(r["about"])}</td></tr>'
+        f'<tr><td><a href="{a(r["url"])}" target="_blank" rel="noopener"><b>{a(r["name"])}</b></a></td><td>{a(r["role"])}</td><td>{a(r["about"])}</td></tr>'
         for r in cfg["project"]["repos"]
     )
 
@@ -357,7 +357,10 @@ def page(cfg, data):
 <h2>Featured project</h2>
 <a class="stage" href="{a(cfg["project"]["url"])}" target="_blank" rel="noopener" style="display:block">
 <img src="assets/project/lakehouse.svg" alt="{a(cfg["project"]["title"])}">{spots(PROJECT_SPOTS, 860, 432)}</a>
-<table>{repos}</table><p>{a(cfg["project"]["note"])}</p>
+<p>{md_inline(cfg["project"]["intro"])}</p>
+<table>{repos}</table>
+<ul class="about">{"".join(f"<li>{md_inline(h)}</li>" for h in cfg["project"]["highlights"])}</ul>
+<p>{a(cfg["project"]["note"])}</p>
 
 <h2>Skills &amp; Tools</h2><div class="card">{"".join(groups)}</div>
 

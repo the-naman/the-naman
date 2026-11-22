@@ -14,21 +14,42 @@
 
 ### About me
 
-- **Data Engineer**, Ex-<a href="https://www.capgemini.com/in-en/" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru.">Capgemini</a> (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
+- **Data Engineer**, ex-<a href="https://www.capgemini.com/in-en/" title="Capgemini · Global IT services and consulting company; data engineering work in Bengaluru.">Capgemini</a> (Bengaluru). I build data platforms end to end: ingestion, modelling, quality, release and operations.
 - I work mostly in **PySpark, SQL, Python and Databricks**, with Azure and AWS.
 - **Cyber Security graduate**, so privacy and least privilege come first: masks, tokens, service principals, no secrets in Git.
+- I also build and run my own sites on a hardened Linux server behind Cloudflare, starting with [kumarnaman.com](https://kumarnaman.com).
 - Off the keyboard: ♟️ chess.
 
 ### Featured project
 
-<a href="https://github.com/the-naman/flexi_quant_finance_fd" title="Open the lakehouse project on GitHub"><img src="assets/project/lakehouse.svg" width="100%" alt="Lakehouse platform: sources into Bronze, Silver and Gold, a group view, dashboards and alerts, released from dev to test to prod" title="Open the lakehouse project on GitHub" /></a>
+<a href="https://github.com/the-naman/bhg-fqf-lakehouse" title="Open the Group Lakehouse on GitHub: both projects in one repo"><img src="assets/project/lakehouse.svg" width="100%" alt="Group Lakehouse: sources into Bronze, Silver and Gold, a group view, dashboards and alerts, released from dev to test to prod" title="Open the Group Lakehouse on GitHub: both projects in one repo" /></a>
 
-| Repo | What it is |
-|---|---|
-| [**flexi_quant_finance_fd**](https://github.com/the-naman/flexi_quant_finance_fd) | The acquired lender: 8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert |
-| [**bio_health_group_hd**](https://github.com/the-naman/bio_health_group_hd) | The healthcare parent: its own lakehouse plus the nightly group view across both companies |
+One end-to-end **Databricks lakehouse** for a healthcare group and the lender it acquired. Start at **[bhg-fqf-lakehouse](https://github.com/the-naman/bhg-fqf-lakehouse)**: it brings both company repos together as submodules on their production branches, with the shared architecture and results.
 
-Both run on Databricks with dev, test and prod, pull-request approvals, CI checks and tests, column masks and HTML alert mails.
+| Repo | Role | What it is |
+|---|---|---|
+| [**bhg-fqf-lakehouse**](https://github.com/the-naman/bhg-fqf-lakehouse) | Start here | Both projects in one place: shared README, architecture and results. Each folder is a submodule on that repo's prod branch |
+| [**bio_health_group_hd**](https://github.com/the-naman/bio_health_group_hd) | Parent | The healthcare parent: its own lakehouse plus the nightly group view across both companies |
+| [**flexi_quant_finance_fd**](https://github.com/the-naman/flexi_quant_finance_fd) | Acquired lender | 8 messy sources in 6 formats (incl. PDF and OCR), SCD2, a Kafka payment stream with a failed-payment alert |
+
+**What it proves**
+
+- **Messy sources:** 24 tables in 6 formats, including a PDF bank statement and OCR of deposit-slip images
+- **Group view:** 401 people matched across the two companies; intercompany money counted once
+- **Real time:** Kafka → Structured Streaming → 10-minute windows → a failed-payment alert, mailed once
+- **Release safety:** dev → test → prod by pull request with approvals, 10 checks, tests and CodeQL; Asset Bundles validated in CI
+- **Performance:** prod daily runs cut from 11–14 min to 7–10 min after measured tuning
+
+**Get both projects**
+
+```bash
+git clone --recurse-submodules https://github.com/the-naman/bhg-fqf-lakehouse.git
+```
+
+Read more: [Plain-language walkthrough with diagrams](https://kumarnaman.com/blog/databricks-lakehouse-explained) · [Portfolio](https://kumarnaman.com)
+
+Column masks, keyed tokens, row filters and service principals throughout; secrets only in GitHub secrets and Databricks secret scopes. All data is synthetic.
+<sub>Hover any box for details on the [live dashboard](https://the-naman.github.io/the-naman/).</sub>
 
 ### Skills & Tools
 

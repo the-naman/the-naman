@@ -83,10 +83,16 @@ def build(cfg):
             'width="100%" ',
         ),
         "",
-        "| Repo | What it is |",
-        "|---|---|",
+        p["intro"],
+        "",
+        "| Repo | Role | What it is |",
+        "|---|---|---|",
     ]
-    out += [f"| [**{r['name']}**]({r['url']}) | {r['about']} |" for r in p["repos"]]
+    out += [f"| [**{r['name']}**]({r['url']}) | {r['role']} | {r['about']} |" for r in p["repos"]]
+    out += ["", "**What it proves**", ""]
+    out += [f"- {h}" for h in p["highlights"]]
+    out += ["", "**Get both projects**", "", "```bash", p["clone"], "```", ""]
+    out.append("Read more: " + " · ".join(f"[{x['name']}]({x['url']})" for x in p["links"]))
     out += [
         "",
         p["note"],
