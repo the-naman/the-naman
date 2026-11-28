@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="64" viewBox="0 0 270 64" role="img">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#131c38"/></linearGradient>
+<linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect width="270" height="64" rx="16"/></clipPath></defs>
+<g clip-path="url(#c)"><rect width="270" height="64" fill="url(#b)"/>
+<rect x="-120" width="80" height="64" fill="url(#sw)" transform="skewX(-20)"><animate attributeName="x" values="-120;390" dur="5s" repeatCount="indefinite"/></rect></g>
+<rect x=".75" y=".75" width="268.5" height="62.5" rx="16" fill="none" stroke="#3b7bbf" stroke-opacity=".6" stroke-width="1.5"/>
+<image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjcuMDU2MDAwMjMyNjk2NTMzIDMgMzcuMzUwOTU5Nzc3ODMyMDMgNDUiPjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzAwMjk5MSIgZD0iTTM4LjkxNCAxMy4zNWMwIDUuNTc0LTUuMTQ0IDEyLjE1LTEyLjkyNyAxMi4xNUgxOC40OWwtLjM2OCAyLjMyMkwxNi4zNzMgMzlINy4wNTZsNS42MDUtMzZoMTUuMDk1YzUuMDgzIDAgOS4wODIgMi44MzMgMTAuNTU1IDYuNzdhOS42ODcgOS42ODcgMCAwIDEgLjYwMyAzLjU4eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM2MENERkYiIGQ9Ik00NC4yODQgMjMuN0ExMi44OTQgMTIuODk0IDAgMCAxIDMxLjUzIDM0LjVoLTUuMjA2TDI0LjE1NyA0OEgxNC44OWwxLjQ4My05IDEuNzUtMTEuMTc4LjM2Ny0yLjMyMmg3LjQ5N2M3Ljc3MyAwIDEyLjkyNy02LjU3NiAxMi45MjctMTIuMTUgMy44MjUgMS45NzQgNi4wNTUgNS45NjMgNS4zNyAxMC4zNXoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA4Q0ZGIiBkPSJNMzguOTE0IDEzLjM1QzM3LjMxIDEyLjUxMSAzNS4zNjUgMTIgMzMuMjQ4IDEyaC0xMi42NEwxOC40OSAyNS41aDcuNDk3YzcuNzczIDAgMTIuOTI3LTYuNTc2IDEyLjkyNy0xMi4xNXoiPjwvcGF0aD48L2c+PC9zdmc+" x="16" y="14" width="36" height="36"/>
+<text x="66" y="29" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="15" fill="#e6edf7">PayPal</text>
+<text x="66" y="47" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#93a1bd">send any amount, any country</text>
+<text x="252" y="38" text-anchor="end" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="17" fill="#3b7bbf">→
+<animate attributeName="x" values="250;256;250" dur="1.8s" repeatCount="indefinite"/></text>
+</svg>
